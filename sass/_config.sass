@@ -1,0 +1,114 @@
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+
+// USER VARIABLES SECTION
+\:root 
+	font-size: calc(1vw + 1vh + .5vmin)
+
+
+$accent:     #f9b034 // Accent Color
+$accentinv:  #6505fb // Accent Color
+$accentinvgrad: radial-gradient(circle, rgba(115,36,205,1) 0%, rgba(67,7,114,1) 100%)
+$brown: 		 #2e1a1a
+$brownlight: #5c4e4e
+$fontsize:   .475rem // Body Font Size
+$textcolor:  #262626 // Text Color
+$white:			 #fdfdfd
+$gray:			 #f2f2f2
+$darkgray:   #333333		
+$mainfamily: newyork,roboto, sans-serif // Main Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+
+// FONTS LOAD SECTION
+
+@mixin font($f-name, $f-style, $f-weight, $f-url)
+	@font-face
+		font-family: $f-name
+		font-style: $f-style
+		font-weight: $f-weight
+		src: url($f-url) format('woff2')
+
+
+@include font('roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+@include font('roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+@include font('roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+@include font('roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+
+@include font('newyork', normal, 400, '../fonts/NewYorkExtraLarge/NewYorkExtraLarge-Regular.woff2')
+@include font('newyorkmedium', medium, 400,'../fonts/NewYorkExtraLarge/NewYorkExtraLarge-Medium.woff2')
+@include font('newyorkh', heavy, 500, '../fonts/NewYorkExtraLarge/NewYorkExtraLarge-Heavy.woff2')
+
+@include font('newyorkb', bold, 800, '../fonts/NewYorkExtraLarge/NewYorkExtraLarge-Bold.woff2')
+@include font('newyorksb', samibold, 900, '../fonts/NewYorkExtraLarge/NewYorkExtraLarge-Semibold.woff2')
+
+
+// GENERAL DOCUMENT STYLES
+
+
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+ul,li
+	list-style: none
+	padding: 0
+	margin: 0
+
+b, strong
+	font-weight: bold
+
+a
+	text-decoration: none
+	color: $white
+a:hover
+	text-decoration: none
+	color: $white
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green	
+
+body
+	font-size: $fontsize
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: $mainfamily
+	overflow-x: hidden
+	color: $textcolor
+
+.seo
+	position: absolute
+	z-index: -99999
+	visibility: hidden
+	top: -999em
+
+.disable
+	display: none	
+		
+.accent
+	color: $accent
+.accentinv
+	color: $accentinv	
+
+
+.swal2-popup
+	font-size: 1em !important
+.swal2-styled.swal2-confirm
+	background-color: $accentinv	!important
+	

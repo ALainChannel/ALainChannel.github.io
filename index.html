@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Bitcoffeen</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.png">
+	<meta property="og:image" content="img/dest/preview.jpg">
+	<link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body>
+
+<header class="head paterndouble">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-12">
+				<div class="logo"><a href="" class="logolink"><img src="./images/src/img/logo.svg" alt="" class="logoimg"></a></div>
+			</div>
+			<div class="col-lg-7 col-9">
+				<nav class="menu">
+					<ul class="menu-list">
+						<li class="menu-item"><a href="" class="menu-link">Обзор</a> </li>
+						<li class="menu-item"><a href="" class="menu-link">Кошельки</a></li>
+						<li class="menu-item"><a href="" class="menu-link">White Paper</a></li>
+						<li class="menu-item"><a href="" class="menu-link">Поддержка</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-lg-2 col-3">	
+				<div class="sing"><a href="#" rel="sign-in" class="show_popup sign-link">
+					<i class="icosing">
+						<div class="icosingbor"></div>
+						<div class="icosingbor icosingbor-accent"></div>
+						<div class="icosingbor"></div>
+						<div class="icosingbor"></div>
+					</i>BFF Online</a></div>
+				</div>
+			</div>
+	</div>
+</header>
+
+<section class="popup">
+		<div class="overlay_popup" style="display: none;"></div>
+			<div id="sign-in" class="sign sign--in " style="display: none;" >
+				<div class="overlay_popup"></div>
+				<div class="sign-popup paterndouble">
+					<i class="popup-close">×</i>
+					<div class="sign-left">
+						<h3 class="sign-title">Авторизация в <span class="sign-title-bff accentinv">BFF Online <i class="icosing"><div class="icosingbor"></div><div class="icosingbor icosingbor-accent"></div><div class="icosingbor"></div><div class="icosingbor"></div></i> </span></h3>
+						<form action="" class="sign-form">
+							<div class="sign-form-wrap-input">
+							<input type="text" name="" id="" class="sign-form-input" placeholder="Логин" required>
+						</div>
+						<div class="sign-form-wrap-input">
+							<input type="password" name="" id="" class="sign-form-input" placeholder="Пароль" required>
+						</div>
+						<p class="sign-form-input-desc sign-form-input-desc--soc">Войти с помощью соцсетей</p>
+						<div class="sign-form-soc">
+							<div class="sign-form-soc-item"><a href="" class="sign-form-soc-item-link"><img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNCAyNCIgaGVpZ2h0PSI1MTJweCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iNTEycHgiPjxwYXRoIGQ9Im0xNS45OTcgMy45ODVoMi4xOTF2LTMuODE2Yy0uMzc4LS4wNTItMS42NzgtLjE2OS0zLjE5Mi0uMTY5LTYuOTMyIDAtNS4wNDYgNy44NS01LjMyMiA5aC0zLjQ4N3Y0LjI2NmgzLjQ4NnYxMC43MzRoNC4yNzR2LTEwLjczM2gzLjM0NWwuNTMxLTQuMjY2aC0zLjg3N2MuMTg4LTIuODI0LS43NjEtNS4wMTYgMi4wNTEtNS4wMTZ6IiBmaWxsPSIjM2I1OTk5Ii8+PC9zdmc+Cg==" alt="facebook" class="sign-form-soc-item-picture"></a></div>
+							<div class="sign-form-soc-item"><a href="" class="sign-form-soc-item-link"><img src="./images/src/img/ico/soc/vk.svg" alt="vk" class="sign-form-soc-item-picture"></a></div>
+							<div class="sign-form-soc-item"><a href="" class="sign-form-soc-item-link"><img src="./images/src/img/ico/soc/google.svg" alt="google" class="sign-form-soc-item-picture"></a></div>
+							<div class="sign-form-soc-item"><a href="" class="sign-form-soc-item-link"><img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8Y2lyY2xlIHN0eWxlPSJmaWxsOiNDN0Q1REQ7IiBjeD0iNTcuMjY0IiBjeT0iMjU2IiByPSI1Ny4yNjQiLz4KCTxjaXJjbGUgc3R5bGU9ImZpbGw6I0M3RDVERDsiIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjU3LjI2NCIvPgoJPGNpcmNsZSBzdHlsZT0iZmlsbDojQzdENUREOyIgY3g9IjQ1NC43MzYiIGN5PSIyNTYiIHI9IjU3LjI2NCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" alt="more" class="sign-form-soc-item-picture sign-form-soc-item-picture--more"></a></div>
+						</div>
+							<input type="submit" value="Войти" class="sign-form-submit">
+						</form>
+						<div class="sign-extra"><a href="#" rel="sign-recovery" class="sign-extra-link show_popup">Забыли свой логин или пароль?</a><a href="#" rel="sign-up" class="sign-extra-link show_popup">У вас нет аккаунта? Создайте его сейчас.</a></div>
+						<span class="sign-support">Нужна помощь? <a class="sign-extra-link" href="mailto:support@bitcoffeen.com?subject=Вопрос по авторизации">Обращайтесь сейчас</a>  на наш Email.</span>
+					</div>
+				</div>
+		</div>
+
+		<div id="sign-up" class="sign sign--up "  style="display: none;">
+		<div class="sign-popup paterndouble">
+		<i class="popup-close">×</i>
+		<div class="sign-left">
+			<h3 class="sign-title">Создание аккаунта в <span class="sign-title-bff accent">BFF Online <i class="icosing"><div class="icosingbor"></div><div class="icosingbor icosingbor-accent"></div><div class="icosingbor"></div><div class="icosingbor"></div></i> </span></h3>
+			<form action="" class="sign-form">
+				<div class="sign-form-wrap-input">
+				<input type="text" name="" id="" class="sign-form-input" placeholder="Имя" required>
+			</div>
+				<input type="email" name="" id="" class="sign-form-input" placeholder="Email" required>
+				<input type="password" name="" id="" class="sign-form-input" placeholder="Пароль" required>
+				<input type="password" name="" id="" class="sign-form-input" placeholder="Повторите пароль" required>
+				<div class="checkbox-wrap">
+					<input type="checkbox" id="checkbox-toggle" required/>
+					<div class="checkbox-box">
+						<label class="checkbox-box-toggle" for="checkbox-toggle"></label>
+					</div>
+					<a class="checkbox-wrap-desc" href="">Я ознакомился с правилами, <u>политикой конфиденциальности </u> и принимаю их условия.</a>
+				</div>
+				<input type="submit" value="Создать" class="sign-form-submit">
+			</form>
+			<div class="sign-extra"><a href="#" rel="sign-in" class="sign-extra-link show_popup">У вас есть аккаунт? Авторизуйтесь.</a></div>
+			<span class="sign-support">Нужна помощь? <a class="sign-extra-link" href="mailto:support@bitcoffeen.com?subject=Вопрос по авторизации">Обращайтесь сейчас</a>  на наш Email.</span>
+		</div>
+		</div>
+		</div>
+
+
+		<div id="sign-recovery" class="sign sign--recovery " style="display: none;" >
+		<div class="sign-popup paterndouble">
+		<i class="popup-close">×</i>
+		<div class="sign-left">
+			<h3 class="sign-title">Востановелние доступа к <span class="sign-title-bff accentinv">BFF Online <i class="icosing"><div class="icosingbor"></div><div class="icosingbor icosingbor-accent"></div><div class="icosingbor"></div><div class="icosingbor"></div></i> </span></h3>
+			<form action="" class="sign-form">
+				<input type="email" name="" id="" class="sign-form-input" placeholder="Email" required>
+				<p class="sign-form-input-desc">Пожалуйста, укажите Ваш Email по которому была произведена регистрация аккаунта ранее.</p>
+				<input type="submit" value="Отправить" class="sign-form-submit">
+			</form>
+			<div class="sign-extra"><a href="#" rel="sign-up" class="sign-extra-link show_popup">У вас нет регистрации? Создайте еë сейчас.</a></div>
+			<span class="sign-support">Нужна помощь? <a class="sign-extra-link" href="mailto:support@bitcoffeen.com?subject=Вопрос по авторизации">Обращайтесь сейчас</a>  на наш Email.</span>
+		</div>
+		</div>
+		</div>
+
+		<div id="sign-twofa" class="sign sign--twofa" style="display: none;" >
+		<div class="sign-popup paterndouble">
+		<i class="popup-close">×</i>
+		<div class="sign-left">
+			<h3 class="sign-title">Введите код twofa <span class="sign-title-bff accentinv">BFF Online <i class="icosing"><div class="icosingbor"></div><div class="icosingbor icosingbor-accent"></div><div class="icosingbor"></div><div class="icosingbor"></div></i> </span></h3>
+			<form action="" class="sign-form">
+				<input type="email" name="" id="" class="sign-form-input" placeholder="Email" required>
+				<p class="sign-form-input-desc">Пожалуйста, введите код двухфакторной аутентификации сгенерированный приложением.</p>
+				<input type="submit" value="Отправить" class="sign-form-submit">
+			</form>
+			<div class="sign-extra"><a href="#" rel="sign-up" class="sign-extra-link show_popup">У вас нет регистрации? Создайте еë сейчас.</a></div>
+			<span class="sign-support">Нужна помощь? <a class="sign-extra-link" href="mailto:support@bitcoffeen.com?subject=Вопрос по авторизации">Обращайтесь сейчас</a>  на наш Email.</span>
+		</div>
+		</div>
+		</div>
+
+		<div id="sign-sms" class="sign sign--sms"  style="display: none;">
+		<div class="sign-popup paterndouble">
+		<i class="popup-close">×</i>
+		<div class="sign-left">
+			<h3 class="sign-title">Востановелние доступа к <span class="sign-title-bff accentinv">BFF Online <i class="icosing"><div class="icosingbor"></div><div class="icosingbor icosingbor-accent"></div><div class="icosingbor"></div><div class="icosingbor"></div></i> </span></h3>
+			<form action="" class="sign-form">
+				<input type="email" name="" id="" class="sign-form-input" placeholder="Email" required>
+				<p class="sign-form-input-desc">Пожалуйста, укажите Ваш Email по которому была произведена регистрация аккаунта ранее.</p>
+				<input type="submit" value="Отправить" class="sign-form-submit">
+			</form>
+			<div class="sign-extra"><a href="" class="sign-extra-link">У вас нет регистрации? Создайте еë сейчас.</a></div>
+			<span class="sign-support">Нужна помощь? <a class="sign-extra-link" href="mailto:support@bitcoffeen.com?subject=Вопрос по авторизации">Обращайтесь сейчас</a>  на наш Email.</span>
+		</div>
+		</div>
+		</div>
+
+		<div class="sign sign--newpass " style="display: none;">
+		<div class="sign-popup paterndouble">
+		<i class="popup-close">×</i>
+		<div class="sign-left">
+			<h3 class="sign-title">Востановелние доступа к <span class="sign-title-bff accentinv">BFF Online <i class="icosing"><div class="icosingbor"></div><div class="icosingbor icosingbor-accent"></div><div class="icosingbor"></div><div class="icosingbor"></div></i> </span></h3>
+			<form action="" class="sign-form">
+				<input type="password" name="" id="" class="sign-form-input" placeholder="Новый пароль" required>
+				<input type="password" name="" id="" class="sign-form-input" placeholder="Повторите пароль" required>
+				<p class="sign-form-input-desc">После изменения пароля старый пароль будет не действителен.</p>
+				<input type="submit" value="Отправить" class="sign-form-submit">
+			</form>
+			<div class="sign-extra"><a href="" class="sign-extra-link">У вас нет регистрации? Создайте еë сейчас.</a></div>
+			<span class="sign-support">Нужна помощь? <a class="sign-extra-link" href="mailto:support@bitcoffeen.com?subject=Вопрос по авторизации">Обращайтесь сейчас</a>  на наш Email.</span>
+		</div>
+		</div>
+		</div>
+
+		<div class="sign happy-wheel " >
+			<div class="sign-popup">
+			<i class="popup-close">×</i>
+			<div class="sign-left">
+				<div class="box-wheel">
+					
+				</div>
+			</div>
+			<div class="sign-left">
+				<form action="" class="sign-form">
+					<input type="text" name="" id="" class="sign-form-input" placeholder="Имя" required>
+					<input type="phone" name="" id="" class="sign-form-input" placeholder="Номер телефона" required>
+					<p class="sign-form-input-desc">После изменения пароля старый пароль будет не действителен.</p>
+					<input type="submit" value="Крутить барабан" class="sign-form-submit">
+				</form>
+			</div>
+			</div>
+			</div>
+
+
+
+
+
+</section>
+
+
+
+<section class="main">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<div class="head-left">
+					<h2 class="head-title bob">Bitcoffeen</h2>
+					<p class="head-desc pattent">Запатентованная система, которая позволяет покупателям получать криптовалютный Кэшбек (Bitback) с каждой покупки в кофейне, а розничным сетям мотивировать людей возвращаться к ним снова и снова.</p>
+					<div class="head-btn">
+						<div class="btn-item"><a href="" class="btn btn-item-link btn--inv ">Купить токены на LiveCoin</a></div>
+						<div class="btn-item"><a href="" class="btn btn-item-link btn--white">White Paper</a></div>
+						<div class="btn-item"><a href="" class="btn btn-item-link">Для кофейн</a></div>
+						<div class="btn-item"><a href="" class="btn btn-item-link">Франшиза Bitcoffeen</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="head-right">
+					<h3 class="img-title">Сканируй QR.</h3>
+					<span class="img-desc">и посмотрите, как мы работаем.</span>
+					<div class="head-img"><img src="./images/src/img/phone.png" alt="" class="head-picture"></div>
+					<div class="img-btn">
+						<div class="btn-down-item"><a href="" class="img-down-link">Google Play</a></div>
+						<div class="btn-down-item"><a href="" class="img-down-link img-down-link--apple">App Store</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="line-prime	pattent">
+	<div class="container-fluid">
+		<div class="row progress">
+			<h2 class="seo">Наши достижения</h2>
+				<div class="col-md-3 col-sm-6">
+					<div class="progress-item">
+						<div class="progress-title">
+							<h3 class="head-progress-title">Мы запустились</h3>
+							<p class="head-progress-desc">И уже сгенерировали более 25000 QR кодов</p>
+						</div>
+						<div class="progress-img-box"><img src="./images/src/img/progress/qr.svg" alt="" class="progress-picture"></div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="progress-item">
+						<div class="progress-title">
+							<h3 class="head-progress-title">Подключены</h3>
+							<p class="head-progress-desc">Четыре кофейни и один Barbershop</p>
+						</div>
+						<div class="progress-img-box"><img src="./images/src/img/progress/progress.png" alt="" class="progress-picture"></div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="progress-item">
+						<div class="progress-title">
+							<h3 class="head-progress-title">Международный	патент</h3>
+							<p class="head-progress-desc">Зарегистрированный в Новой Зеландии</p>
+						</div>
+						<div class="progress-img-box"><img src="./images/src/img/progress/newzealand.png" alt="Flag New Zealand" class="progress-picture"></div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="progress-item">
+						<div class="progress-title">
+							<h3 class="head-progress-title">Собственная	франшиза</h3>
+							<p class="head-progress-desc">Кофейни для распространения в массы Bitcoffeen</p>
+						</div>
+						<div class="progress-img-box"><img src="./images/src/img/progress/franchise.svg" alt="Bitcoffeen franchise" class="progress-picture"></div>
+					</div>
+				</div>
+		</div>
+	</div>
+</section>
+
+<section class="video-contain">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="videot-title">Коротко о нашей системе.</h2>
+					<video src="./images/src/img/bitcoffeen.mp4" class="videobit" controls></video>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="economy">
+	<div class="container">
+		<div class="row">
+			<div class="economy-box">
+				<div class="economy-title">
+					<span class="bitcoff-title bob">Bitcoffeen</span>
+					<h2 class="economy-box-title">Как работает экономика</h2>
+				</div>
+				<div class="economy-img"><img src="./images/src/img/economy/economy-one.png" alt="" class="economy-picture"></div>
+				<div class="economy-desc">
+					<div class="economy-desc-item">
+						<span class="paragraph">1</span>
+						<p class="economy-inf">При подключении кофейни к системе BFF, она покупает на бирже 1000 BFF  при цене минимум 11= 1 токен BFF. На эти токены она сможет сформировать 10 000  кодов для своих клиентов. 0.1 BFF за каждую кружку кофе отдает своему покупателю кофе.</p>
+					</div>
+					<div class="economy-desc-item">
+						<span class="paragraph">2</span>
+						<p class="economy-inf">При подключении кофейни к системе BFF, она покупает на бирже 1000 BFF  при цене минимум 12= 1 токен BFF. На эти токены она сможет сформировать 10 000  кодов для своих клиентов. 0.1 BFF за каждую кружку кофе отдает своему покупателю кофе.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="commission">
+	<div class="container">
+		<div class="row">
+			<div class="economy-box">
+				<div class="economy-title">
+					<span class="bitcoff-title bob">Bitcoffeen</span>
+					<h2 class="economy-box-title">Как распределяется комиссия системы</h2>
+				</div>
+				<div class="economy-img"><img src="./images/src/img/economy/economy-two.png" alt="" class="economy-picture"></div>
+				<div class="economy-desc">
+					<div class="economy-desc-item">
+						<span class="paragraph">3</span>
+						<p class="economy-inf">ПРИМЕР: пользователь купил 5 кружек кофе и на балансе у него 0.5 BFF. Он может их обменять на бирже на реальные деньги по текущему курсу	или внутри платформы купить на них внутренние продукты, тем самым сжигая токены.</p>
+					</div>
+					<div class="economy-desc-item">
+						<span class="paragraph">4</span>
+						<p class="economy-inf">Цена токена будет расти, так как кофейни и другие магазины будут	постоянно выкупать токены с биржи, будут подключаться новые точки к	системе,  тем самым создавать спрос на них, при этом, не все держатели токенов будут их продавать, а оборачивать  внутри нашей платформы</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="skeyting">
+	<div class="container">
+		<div class="row">
+			<div class="economy-box">
+				<div class="economy-title">
+					<span class="bitcoff-title bob">Bitcoffeen</span>
+					<h2 class="economy-box-title">Условия стекинга</h2>
+				</div>
+				<div class="economy-img"><img src="./images/src/img/economy/economy-tree.png" alt="" class="economy-picture"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="skeytingask">
+	<h2 class="skeyting-head">Зачем мы вводим Стекинг?</h2>
+	<div class="whyskeyting paterndouble">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="whyskeyting-box">
+						<h3 class="whyskeyting-title">Проект <span class="accent">Bitcoffeen</span> <br>	развивается за счет собственных средств.</h3>
+						<p class="whyskeyting-desc">Для динамичного развития с текущим бюджетом, нам понадобится 2 года для выполнения дорожной карты. За счет привлечения средств инвесторов мы способны выполнить дорожную карту за 1 год.</p>
+						<p class="whyskeyting-desc">Для  достижения этой цели, мы вводим на 2 года стекинг <br><span class="accent"> до 50% годовых с ежедневными выплатами в USD.	<br>40 % комиссии с оборота нашей системы пойдет на погашение стейкинга.</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ask">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h3 class="ask-title">Остались вопросы?</h3>
+					<p class="ask-desc">Оставьте свой Telegram или WhatsApp и мы вам ответим в течение 5 минут</p>
+					<form action="" class="ask-form"><div class="ask-form-wrap"> <input type="text" name="" required id="" class="ask-mess"> <input class="seo" id="ask-form-subbmit" type="submit" value=""><label class="ask-form-lable" for="ask-form-subbmit">Отправить</label> </div> </form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+
+
+<section class="roadmap">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<span class="bitcoff-title bob">Bitcoffeen</span>
+				<h2 class="roadmap-title">Дорожная карта 2020</h2>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="roadmap-item">
+					<h3 class="roadmap-item-title">Январь - Март</h3>
+					<div class="roadmap-item-img"><img src="./images/src/img/ico/road-point.svg" alt="Поинт дорожной карты" class="roadmap-item-picture"></div>
+					<p class="roadmap-item-desc">Подача заявки о листинге на Livecoin</p>
+					<p class="roadmap-item-desc">Старт торгов токена BFF на Livecoin</p>
+					<p class="roadmap-item-desc">Добавление проекта в листинги рейтинговых агенств</p>
+					<p class="roadmap-item-desc">Добавление популярных платежных провайдеров</p>
+					<p class="roadmap-item-desc">Усовершенствование работы мобильного приложения для IOS и Android</p>
+					<p class="roadmap-item-desc">Переговоры с партнерами существующей кофеиндустрии (Сетевые кофейни, Обжарочные производства, Поставщики кофе, Поставщики кофейного оборудования)</p>
+					<p class="roadmap-item-desc">Расширение Системы лояльности BITCOFFEEN в регионе</p>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="roadmap-item">
+					<h3 class="roadmap-item-title">Апрель-Июнь</h3>
+					<div class="roadmap-item-img"><img src="./images/src/img/ico/road-point.svg" alt="Поинт дорожной карты" class="roadmap-item-picture"></div>
+					<p class="roadmap-item-desc">Проработка маркетинговой стратегии для стран СНГ</p>
+					<p class="roadmap-item-desc">Интеграция Bitback system в кофейни стран СНГ</p>
+					<p class="roadmap-item-desc">Расширение и предложение к использованию на территории СНГ</p>
+					<p class="roadmap-item-desc">Проработка нового дизайна мобильного приложения</p>
+					<p class="roadmap-item-desc">Подача заявки на листинг токена BFF на одну из крупных бирж (EXMO, Yobit, Bitforex)</p>
+					<p class="roadmap-item-desc">Старт торгов токена BFF на крупной бирже</p>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="roadmap-item">
+					<h3 class="roadmap-item-title">Июль-Сентябрь</h3>
+					<div class="roadmap-item-img"><img src="./images/src/img/ico/road-point.svg" alt="Поинт дорожной карты" class="roadmap-item-picture"></div>
+					<p class="roadmap-item-desc">Редизайн мобильного приложения BITCOFFEEN</p>
+					<p class="roadmap-item-desc">Запуск обновленного мобильного приложения для IOS и Android</p>
+					<p class="roadmap-item-desc">Выпуск собственной линейки кофейной продукции BITCOFFEEN</p>
+					<p class="roadmap-item-desc">Внедрение модуля «Маркет» с возможностью совершения покупок и оплатой токеном BFF</p>
+					<p class="roadmap-item-desc">Проработка маркетинговой стратегии продвижения BITCOFFEEN в странах Азии</p>
+					<p class="roadmap-item-desc">Листинг токена BFF на Азиатскую криптобиржу</p>
+					<p class="roadmap-item-desc">Интеграция системы лояльности Bitback system в торговые сети стран Азии</p>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="roadmap-item">
+					<h3 class="roadmap-item-title">Октябрь-Декабрь</h3>
+					<div class="roadmap-item-img roadmap-item-img--none"><img src="./images/src/img/ico/road-point.svg" alt="Поинт дорожной карты" class="roadmap-item-picture"></div>
+					<p class="roadmap-item-desc">Проработка маркетинговой стратегии продвижения BITCOFFEEN в странах Европы</p>
+					<p class="roadmap-item-desc">Листинг токена BFF на Европейскую криптобиржу</p>
+					<p class="roadmap-item-desc">Интеграция системы лояльности Bitback system в торговые сети Европы</p>
+					<p class="roadmap-item-desc">Подведение итогов работы в 2020 году и проработка плана развития проекта	BITCOFFEEN на 2021 год</p>
+					<p class="roadmap-item-desc">Усовершенствование работы мобильного приложения для IOS и Android</p>
+					<p class="roadmap-item-desc">Переговоры с партнерами существующей кофеиндустрии (Сетевые кофейни,	Обжарочные производства, Поставщики кофе, Поставщики кофейного оборудования)</p>
+					<p class="roadmap-item-desc">Расширение Системы лояльности BITCOFFEEN в регионе</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="achivments">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="achivments-title">Наши текущие рузультаты.</h2>
+				<p class="achivments-desc">Подключено: <br> <span class="accentinv">Четыре кофейни и один Barbershop</span><br>	в регионах России, для их работы выделено<br> 50 000 токенов BFF.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="achivments-item">
+					<h3 class="achivments-item-title">Выкупленно токенов кофейнями</h3>
+					<span class="achivments-item-desc accent">25 000 BFF</span>
+					<div class="achivments-item-img"><img src="./images/src/img/ico/tokenbff.svg" alt="" class="achivments-item-picture"></div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="achivments-item">
+					<h3 class="achivments-item-title">Сформировано кодов</h3>
+					<span class="achivments-item-desc accentinv">24 753 QR кодов</span>
+					<div class="achivments-item-img"><img src="./images/src/img/ico/qrinv.svg" alt="" class="achivments-item-picture"></div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="achivments-item">
+					<h3 class="achivments-item-title">Генерация токенов	в день</h3>
+					<span class="achivments-item-desc accentinv">275 QR</span>
+					<div class="achivments-item-img"><img src="./images/src/img/ico/qrinv.svg" alt="" class="achivments-item-picture"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<h3 class="achivments-coffee-title">Точки, которые уже подключены к системе:</h3>
+			<div class="col-lg-12">
+				<div class="achivments-coffee-item paterndouble paterndouble--accent">
+					<h4 class="achivments-coffee-item-title accent">Кофейня «BITCOFFEEN»</h4>
+					<address class="achivments-coffee-item-address">ул. Нижняя Масловка, 5, корп. 5, Москва, Россия <br>	- переезжает ТЦ «Бирюлевский» ул. Бирюлевская, 43, Москва, Россия</address>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="achivments-coffee-item paterndouble">
+					<h4 class="achivments-coffee-item-title">Кофейня «Laboratoria Coffe»</h4>
+					<address class="achivments-coffee-item-address">ул. Ленинская Слобода, 26, Москва, Россия</address>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="achivments-coffee-item paterndouble">
+					<h4 class="achivments-coffee-item-title">Кофейня «18 Gramm»</h4>
+					<address class="achivments-coffee-item-address">Гражданский проспект, 111к2, Санкт-Петербург, Россия</address>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="achivments-coffee-item paterndouble">
+					<h4 class="achivments-coffee-item-title">Барбершоп «BARN»</h4>
+					<address class="achivments-coffee-item-address">Россия, Санкт-Петербург, Спасский переулок, 6-8</address>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="achivments-coffee-item paterndouble paterndouble--accent">
+					<h4 class="achivments-coffee-item-title accent">Кофейня «BITCOFFEEN»</h4>
+					<address class="achivments-coffee-item-address">ул. 22-го Парт Съезда, 8, Минеральные Воды, Россия</address>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="point paterndouble">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5">
+				<h3 class="point-title">У нас есть <br> собственная точка.</h3>
+				<address class="point-address">которая расположена по адресу в Москве <br> <i>ул. Нижняя Масловка, 5, корп. 5 - переезд в ТЦ «Бирюлевский» ул. Бирюлевская, 43.</i> </address>
+				<span class="poing-generation">которая генерирует...</span><br>
+				<span class="point-plan accent">План в течение 3-х месяцев планируется открыть от 10 - 15 кофеен в крупных городах России.</span>
+			</div>
+			<div class="col-lg-7">
+				<div class="point-slider">
+					<div class="slider">
+						<div class="item">
+								<img src="./images/src/img/slider/cafe1.jpg" alt="Первый слайд">
+						</div>
+				
+						<div class="item">
+								<img src="./images/src/img/slider/cafe2.jpg" alt="Второй слайд">
+						</div>
+				
+						<div class="item">
+								<img src="./images/src/img/slider/cafe3.jpg" alt="Третий слайд">
+						</div>
+				
+						<a class="prev" onclick="minusSlide()">&#10094;</a>
+						<a class="next" onclick="plusSlide()">&#10095;</a>
+				</div>
+				<br>
+				
+				<div class="slider-dots">
+					<span class="slider-dots_item" onclick="currentSlide(1)"></span> 
+						<span class="slider-dots_item" onclick="currentSlide(2)"></span> 
+						<span class="slider-dots_item" onclick="currentSlide(3)"></span> 
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="bitcoffee-team">
+	<div class="container">
+		<div class="row">
+		<div class="col-lg-12">
+			<div class="bitcoffee-team-title-box">
+				<span class="bitcoff-title bitcoff-title--black bob">Bitcoffeen</span>
+				<h2 class="bitcoffee-team-title">Наша команда</h2>
+			</div>
+		</div>	
+			<div class="col-lg-4 col-sm-6">
+				<div class="bitcoffee-team-item">
+					<div class="bitcoffee-team-img"><img src="./images/src/img/team/Veniamin.jpg" alt="" class="bitcoffee-team-picture"></div>
+					<span class="bitcoffee-team-item-name">Martin Riz</span>
+					<div class="bitcoffee-team-item-soc"><a href="" class="bitcoffee-team-soc">f</a><a href="" class="bitcoffee-team-soc">vk</a></div>
+					<p class="bitcoffee-team-item-desc">Является экспертом в сфере анализа данных, повышения эффективности бизнес-процессов и управления активами компаний. Обладает высоким уровнем знаний по финансовому анализу. а в команду, наряду с успешной разработкой коммерческих веб-проектов от этапа планирования до запуска и построения маркетингового плана, его продвижения на рынке. Колоссальный опыт способствует успешному применению и достижению поставленных целей проекта Bitcoffeen.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="bitcoffee-team-item">
+					<div class="bitcoffee-team-img"><img src="./images/src/img/team/Veniamin.jpg" alt="" class="bitcoffee-team-picture"></div>
+					<span class="bitcoffee-team-item-name">Martin Riz</span>
+					<div class="bitcoffee-team-item-soc"><a href="" class="bitcoffee-team-soc">f</a><a href="" class="bitcoffee-team-soc">vk</a></div>
+					<p class="bitcoffee-team-item-desc">Является экспертом в сфере анализа данных, повышения эффективности бизнес-процессов и управления активами компаний. Обладает высоким уровнем знаний по финансовому анализу. а в команду, наряду с успешной разработкой коммерческих веб-проектов от этапа планирования до запуска и построения маркетингового плана, его продвижения на рынке. Колоссальный опыт способствует успешному применению и достижению поставленных целей проекта Bitcoffeen.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="bitcoffee-team-item">
+					<div class="bitcoffee-team-img"><img src="./images/src/img/team/Veniamin.jpg" alt="" class="bitcoffee-team-picture"></div>
+					<span class="bitcoffee-team-item-name">Martin Riz</span>
+					<div class="bitcoffee-team-item-soc"><a href="" class="bitcoffee-team-soc">f</a><a href="" class="bitcoffee-team-soc">vk</a></div>
+					<p class="bitcoffee-team-item-desc">Является экспертом в сфере анализа данных, повышения эффективности бизнес-процессов и управления активами компаний. Обладает высоким уровнем знаний по финансовому анализу. а в команду, наряду с успешной разработкой коммерческих веб-проектов от этапа планирования до запуска и построения маркетингового плана, его продвижения на рынке. Колоссальный опыт способствует успешному применению и достижению поставленных целей проекта Bitcoffeen.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="bitcoffee-team-item">
+					<div class="bitcoffee-team-img"><img src="./images/src/img/team/Veniamin.jpg" alt="" class="bitcoffee-team-picture"></div>
+					<span class="bitcoffee-team-item-name">Martin Riz</span>
+					<div class="bitcoffee-team-item-soc"><a href="" class="bitcoffee-team-soc">f</a><a href="" class="bitcoffee-team-soc">vk</a></div>
+					<p class="bitcoffee-team-item-desc">Является экспертом в сфере анализа данных, повышения эффективности бизнес-процессов и управления активами компаний. Обладает высоким уровнем знаний по финансовому анализу. а в команду, наряду с успешной разработкой коммерческих веб-проектов от этапа планирования до запуска и построения маркетингового плана, его продвижения на рынке. Колоссальный опыт способствует успешному применению и достижению поставленных целей проекта Bitcoffeen.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="bitcoffee-team-item">
+					<div class="bitcoffee-team-img"><img src="./images/src/img/team/Veniamin.jpg" alt="" class="bitcoffee-team-picture"></div>
+					<span class="bitcoffee-team-item-name">Martin Riz</span>
+					<div class="bitcoffee-team-item-soc"><a href="" class="bitcoffee-team-soc">f</a><a href="" class="bitcoffee-team-soc">vk</a></div>
+					<p class="bitcoffee-team-item-desc">Является экспертом в сфере анализа данных, повышения эффективности бизнес-процессов и управления активами компаний. Обладает высоким уровнем знаний по финансовому анализу. а в команду, наряду с успешной разработкой коммерческих веб-проектов от этапа планирования до запуска и построения маркетингового плана, его продвижения на рынке. Колоссальный опыт способствует успешному применению и достижению поставленных целей проекта Bitcoffeen.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="bitcoffee-team-item">
+					<div class="bitcoffee-team-img"><img src="./images/src/img/team/Veniamin.jpg" alt="" class="bitcoffee-team-picture"></div>
+					<span class="bitcoffee-team-item-name">Martin Riz</span>
+					<div class="bitcoffee-team-item-soc"><a href="" class="bitcoffee-team-soc">f</a><a href="" class="bitcoffee-team-soc">vk</a></div>
+					<p class="bitcoffee-team-item-desc">Является экспертом в сфере анализа данных, повышения эффективности бизнес-процессов и управления активами компаний. Обладает высоким уровнем знаний по финансовому анализу. а в команду, наряду с успешной разработкой коммерческих веб-проектов от этапа планирования до запуска и построения маркетингового плана, его продвижения на рынке. Колоссальный опыт способствует успешному применению и достижению поставленных целей проекта Bitcoffeen.</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+
+<section class="bitcoffeen-connect">
+	<h2 class="seo">Кем вы можете стать</h2>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="bitcoffeen-connect-item">
+					<div class="bitcoffeen-connect-item-img"><img src="./images/src/img/ico/invest.png" alt="Инвестор" class="bitcoffeen-connect-item-picture"></div>
+					<h3 class="bitcoffeen-connect-item-title">Инвесторам</h3>
+					<p class="bitcoffeen-connect-item-desc">Выберите свой тариф, с минимальными рисками так как вы вкладываете ваши средства в  реальный бизнес, который публично виден всем, всю нашу сеть кофеен мы всегда отображаем на интерактивных картах и вы можете с легкостью определить масштаб нашего бизнеса.</p>
+					<span class="bitcoffeen-connect-item-bottom accentinv">До шести тарифных планов</span>
+					<div class="bitcoffeen-connect-item-btn"><a href="" class="bitcoffeen-connect-item-link">Подробнее</a></div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="bitcoffeen-connect-item">
+					<div class="bitcoffeen-connect-item-img"><img src="./images/src/img/ico/cafe.svg" alt="Владелец кафе" class="bitcoffeen-connect-item-picture"></div>
+					<h3 class="bitcoffeen-connect-item-title">Владелец точки с кофе</h3>
+					<p class="bitcoffeen-connect-item-desc">У вас есть свое кафе или ресторан? тогда мы с удовольствием поможем вам в более прогрессивном развитии вашего бизнеса, предоставив все необходимые средства для формирования QR кодов и так же проведем обучение вашего персонала и ознакомим с нашей криптовалютной кэшбек системой Bitback System</p>
+					<span class="bitcoffeen-connect-item-bottom accentinv">Мы предоставим все необходимое</span>
+					<div class="bitcoffeen-connect-item-btn"><a href="" class="bitcoffeen-connect-item-link">Подробнее</a></div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="bitcoffeen-connect-item">
+					<div class="bitcoffeen-connect-item-img"><img src="./images/src/img/ico/franchise.png" alt="Франшиза" class="bitcoffeen-connect-item-picture"></div>
+					<h3 class="bitcoffeen-connect-item-title">Купить Франшизу</h3>
+					<p class="bitcoffeen-connect-item-desc">Покупая франшизу вы всегда можете быть уверенны в нашем профессионализме выполнения всех необходимых задач и поддержки запуска вашего бизнеса под нашим брендом. Все самое необходимое мы всегда предоставляем нашим партнерам и в самые кратчайшие сроки. Ваша точка будет запущена без задержек.</p>
+					<span class="bitcoffeen-connect-item-bottom accentinv">Полноценный комфорт на старте</span>
+					<div class="bitcoffeen-connect-item-btn"><a href="" class="bitcoffeen-connect-item-link">Подробнее</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="whytokengrow">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="whytokengrow-title">Почему токен  будет расти в цене <br>	и как заработать инвестору?</h2>
+			</div>
+			<div class="col-lg-12">
+				<div class="whytokengrow-item tokenimg">
+					<h3 class="whytokengrow-item-title">Заработать можно благодоря стекигу в USD</h3>
+					<div class="whytokengrow-why"><span class="whytokengrow-item-why-one">Зачем мы его ввели?</span><a href="" class="whytokengrow-item-link">Подробнее по ссылке.</a></div>
+					<p class="whytokengrow-item-desc">Мы платим бонусы в USD с нашей прибыли, тем самым мы не увеличиваем в обращении кол-во токкенов и цену токена это не повлияет.</p>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="whytokengrow-item tokenimg">
+					<h3 class="whytokengrow-item-title">За счет нашей экономики, описанной выше.</h3>
+					<p class="whytokengrow-item-desc">Всегда будет спрос на токены, так как по нашей бизнес модели кофейни всегда будут больше закупать токенов, чем их продавать, так как не все продают свои токены, многие их тратят внутри системы, к тому же заказать через нас можно кофе, аппараты , помощь за токены BFF.</p>
+					<div class="whytokengrow-why"><span class="whytokengrow-item-why-one">Мы уже работаем и наша бизнес модель протестирована.</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="token-economy">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="token-economy-title">Токеномика проекта.</h2>
+			</div>
+			<div class="col-lg-12">
+				<div class="token-economy-table">
+					<div class="token-economy-table-item">
+						<div class="token-economy-item-title"><span class="token-economy-title-name">Северная Америка</span></div>
+						<div class="token-economy-main">
+								<span class="token-economy-main-title accentinv">190 млн BFF</span>
+								<p class="token-economy-hash">0x904ac4f394e075809191 <br> e44A9Ae41D2D053B075a</p>
+						</div>
+					</div>
+					<div class="token-economy-table-item">
+						<div class="token-economy-item-title"><span class="token-economy-title-name">Южная Америка</span></div>
+						<div class="token-economy-main">
+								<span class="token-economy-main-title accentinv">130 млн BFF</span>
+								<p class="token-economy-hash">0xD965c3acAD0d025B0FF<br> 60B811d1Aa6eCC4537fe7</p>
+						</div>
+					</div>
+					<div class="token-economy-table-item">
+						<div class="token-economy-item-title"><span class="token-economy-title-name">Европа</span></div>
+						<div class="token-economy-main">
+								<span class="token-economy-main-title accentinv">200 млн BFF</span>
+								<p class="token-economy-hash">0x250618f34f6aA370fe051<br> 99EA63E7d72c460e9ef</p>
+						</div>
+					</div>
+					<div class="token-economy-table-item">
+						<div class="token-economy-item-title"><span class="token-economy-title-name">Азия</span></div>
+						<div class="token-economy-main">
+								<span class="token-economy-main-title accentinv">200 млн BFF</span>
+								<p class="token-economy-hash">0xE44C878c2AC17739c4b7 <br> 971740B8e14E749eA6Be</p>
+						</div>
+					</div>
+					<div class="token-economy-table-item">
+						<div class="token-economy-item-title"><span class="token-economy-title-name">Океания (Австралазия)</span></div>
+						<div class="token-economy-main">
+								<span class="token-economy-main-title accentinv">100 млн BFF</span>
+								<p class="token-economy-hash">0xA246aDE0aBE2749Fb1D <br> 9A3Bdd18f53B358Fd7F9E</p>
+						</div>
+					</div>
+					<div class="token-economy-table-item">
+						<div class="token-economy-item-title"><span class="token-economy-title-name">Африка</span></div>
+						<div class="token-economy-main">
+								<span class="token-economy-main-title accentinv">130 млн BFF</span>
+								<p class="token-economy-hash">0xf78973c2106c66594d8C <br> 6d4Cd7CE7eaaf01aA2Ee</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-8 offset-lg-2">
+				<div class="token-economy-reserve">
+					<span class="token-economy-reserve-title accent">Резерв (токены компании) 50 млн BFF</span>
+					<p class="token-economy-reserve-hash">0x23222953e646CEd6549B3c7Cbc7Bcf954ea65485</p>
+				</div>
+			</div>
+			<div class="col-lg-8 offset-lg-2">
+				<div class="token-economy-stat">
+					<div class="token-economy-stat-item"><span class="token-economy-stat-item-desc">Для работы системы во всем мире <br> <b class="accentinv"> создано 1 000 000 000 токенов BFF</b> <br> и распределены под будущие кофейни в регионах.</span></div>
+					<div class="token-economy-stat-item"><span class="token-economy-stat-item-desc"><b class="accentinv">975 000 токенов BFF </b> <br>	выделено на Livecoin.net для генераций под <br> новые подключенные кофейни.<br> <br><b class="accentinv"> 25 000 токенов BFF</b>	<br> 	на платформе.</span></div>
+					<div class="token-economy-stat-item"><span class="token-economy-stat-item-desc">Под одну подключенную точку <br>	продаж кофе формируется <br> <b class="accentinv">	10 000 токенов.</b></span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="download-app pattern-bottom">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 ">
+				<div class="download-app-left">
+					<h2 class="download-app-title">Скачай приложение</h2>
+					<p class="download-app-desc">Ведь мы создали его для вашего удобства</p>
+					<div class="download-app-btn"><a href="" class="download-app-link">Скачать</a></div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="download-app-right">
+					<div class="download-app-img"><img src="./images/src/img/downphone.png" alt="Приложение" class="download-app-picture"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> 
+
+<section class="contacts pattern-bottom">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 offset-lg-2">
+				<div class="contacts-box">
+					<h2 class="contacts-title">Остались вопросы?</h2>
+					<p class="contact-desc">Оставьте свой <b class="accentinv"> Telegramm </b>или <br> <b class="accentinv">  WhatsApp </b> и мы Вам перезвоним</p>
+					<form action="" class="contacts-form">
+						<input type="text" placeholder="Ваше Имя" name="" id="" required class="contacts-input">
+						<input type="text" placeholder="Telegram / WhatsApp" required name="" id="" class="contacts-input">
+						<input type="text" placeholder="Пожелания" name=""  required id="" class="contacts-input">
+						<div class="contacts-btn"><input type="submit" value="Отправить" class="contacts-link"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+	<script src="js/app.min.js"></script>
+
+</body>
+</html>

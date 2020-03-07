@@ -1,0 +1,1607 @@
+@import config
+
+// HEADER
+
+header
+	box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1)
+	background-color: #ffffff
+	overflow: hidden
+	padding: .65em 0
+	z-index: 1
+
+.paterndouble
+	position: relative
+	&::after
+		content: ''
+		height: 35em
+		width: 35em
+		position: absolute
+		top: 50%
+		left: 0
+		background: url(../images/src/img/pattern.svg) no-repeat center
+		transform: translate(-50%,-50%)
+		z-index: -5
+		opacity: .9
+	&::before
+		content: ''
+		height: 35em
+		width: 35em
+		position: absolute
+		top: 50%
+		right: 0
+		background: url(../images/src/img/pattern.svg) no-repeat center
+		transform: translate(50%,-50%)
+		z-index: -5
+		opacity: .9
+.icosing
+	width: 18px
+	height: 18px
+	margin-right: 5px
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-around
+	transition: .3s ease
+
+	.icosingbor
+		width: 8px
+		height: 8px
+		border: 2px solid $brown
+		box-sizing: border-box
+		padding: 2px
+		&-accent
+			border: 2px solid $accent
+			transition: all ease .5s
+
+.menu
+	padding-right: 1em
+	height: 100%
+	display: flex
+	justify-content: flex-end
+.menu-list
+	display: flex
+	align-items: center
+	.menu-item
+		padding: 0 1em
+.menu-link
+	font-size: 1.2em
+	color: $brownlight
+	transition: color ease .5s
+	&:hover
+		color: $accentinv	
+
+.sing
+	display: flex
+	align-items: center
+	height: 100%
+.sign-link
+	display: flex
+	align-items: center
+	font-size: 1.2em
+	color: $accent
+	transition: color ease .5s
+	&:hover
+		color: $accentinv
+		.icosingbor-accent
+			border: 2px solid $accentinv
+			margin-top: -3px
+		.icosing
+			width: 20px
+			height: 20px
+
+// HEADER	 END
+
+// SIGN
+
+.overlay_popup
+	background: rgba(0, 0, 0, 0.4)
+	display: flex
+	position: fixed
+	z-index: 1070
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	flex-direction: row
+	align-items: center
+	justify-content: center
+	padding: 0.625em
+	overflow-x: hidden
+	transition: background-color 0.1s
+	-webkit-overflow-scrolling: touch
+
+.sign
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: center
+	overflow-x: hidden
+	transition: background-color 0.1s
+	-webkit-overflow-scrolling: touch
+
+.sign-popup
+	display: flex
+	position: fixed
+	z-index: 1080
+	top: 50%
+	transform: translate(0, -50%)
+	flex-direction: row
+	align-items: center
+	width: auto
+	padding: 0.625em
+	overflow-x: hidden
+	overflow-y: hidden
+	background: $white
+	box-shadow: 0 0 0.625em #d9d9d9
+	border-radius: .5em
+	min-width: 60%
+	-webkit-overflow-scrolling: touch
+	&::before
+		z-index: 10
+		height: 80%
+		background-size: contain
+		width: 40em
+		background-image: url(../images/src/img/ico/pattern-accentinv.svg) 
+		transform: translate(0%,-50%)
+		background-position-x: right
+	&::after
+		display: none
+.sign-form
+	padding-right: 10em
+	max-width: 40em
+
+.sign-title
+	font-family: newyorkl
+	font-weight: 600
+	font-size: 2.5em
+	margin-bottom: 1em
+.sign-title-bff
+	font-weight: 600
+	font-family: newyorksm
+	display: inline-flex
+	align-items: center
+	.icosing
+		margin-left: .5em
+		width: 1.1em
+		height: 1.1em
+		.icosingbor
+			width: .39em
+			height: .39em
+			border: .1em solid $accentinv
+		.icosingbor-accent
+			width: .39em
+			height: .39em
+			border: .1em solid $accent
+.sign-form-input
+	font-size: 1.3em
+	border-radius: .25em
+	padding: .4em 1em
+	border: solid 1.5px darken($gray,4%)
+	margin-bottom: 1.5em
+	width: 100%
+.sign-form-input-desc
+	font-size: .8em
+	&--soc
+		margin-bottom: 1em
+
+.popup-close 
+	position: absolute
+	z-index: 2
+	top: 0
+	right: 0
+	justify-content: center
+	width: 1.2em
+	height: 1.2em
+	padding: 0
+	overflow: hidden
+	transition: color 0.1s ease-out
+	border: none
+	border-radius: 0
+	outline: initial
+	background: transparent
+	color: #cccccc
+	font-family: serif
+	font-size: 2.5em
+	line-height: 1.2
+	cursor: pointer
+	font-weight: 900
+	color: $accentinv
+	text-align: center
+
+.popup-close:hover
+	transform: none
+	background: transparent
+	color: #f27474
+
+.sign-form
+	padding-right: 16em
+
+.sign-form-submit
+	color: $white
+	background-color: $accentinv
+	border: none
+	font-size: 1.3em
+	padding: .4em
+	border-radius: .25em
+	margin: 2em 0
+	margin-bottom: 1em
+	transition: background-color .3s ease-in
+	&:hover
+		background-color: $accent
+.sign-left,.sign-form
+	display: flex
+	flex-direction: column
+
+.sign-left
+	padding: 2.5em 
+	padding-right: 0
+	padding-bottom: 1.5em
+	font-family: newyorkl
+.sign-extra
+	display: flex
+	flex-direction: column
+	margin-bottom: 3em
+.sign-extra-link
+	font-size: 1.1em
+	color: $accentinv
+	transition: color .3s
+	&:hover
+		color: $accent
+
+.sign--up
+	.sign-form-input
+		margin-bottom: .8em
+	.sign-form-submit
+		background-color: $accent
+		&:hover
+			background-color: $accentinv
+
+
+
+.sign-form-soc 
+	display: flex
+.sign-form-soc-item
+	width: 2em
+	height: 2em
+	margin-right: 1em
+	border-radius: .5em
+	background-color: darken($gray,1%)
+	transition: all .3s ease-in
+	border: .1em solid darken($gray,3%)
+	&:hover
+		background-color: darken($gray,5%)
+		border: .1em solid darken($gray,6%)
+.sign-form-soc-item-link
+	height: 100%
+	width: 100%
+	display: block
+	padding: 0.4em
+	display: flex
+		
+.sign-form-soc-item-picture
+	width: auto
+	height: 100%
+	object-fit: cover
+	&--more
+		fill: orange
+
+
+@media screen and ( max-width: 768px )
+	.sign-popup
+		width: 80%
+		&::before
+			width: 20em
+			height: 60%
+	
+
+/////HAPPY WHEEL
+.happy-wheel
+	.sign-popup
+		justify-content: flex-end
+	.sign-form
+		justify-content: flex-end
+		padding-right: 2em
+		padding-left: 10em
+
+/////HAPPY WHEEL END
+
+///// CHECKBOX
+
+.checkbox-wrap-desc
+	font-size: .7em
+	color: $darkgray
+	padding-left: 1em
+	transition: 400ms all ease-in-out 50ms
+	&:hover
+		color: $darkgray
+		u
+			color: $accentinv
+			text-decoration: underline
+.checkbox-wrap
+	display: flex
+	align-items: center
+
+#checkbox-toggle[type="checkbox"]
+  position: absolute
+  opacity: 0
+
+.checkbox-box
+  &::before, &::after
+		transition: 400ms all ease-in-out 50ms
+		box-sizing: border-box
+		backface-visibility: hidden
+
+/*Button is :CHECKED
+
+#checkbox-toggle[type="checkbox"]:checked ~ .checkbox-box
+  background: rgba(73, 168, 68, 1)
+  box-shadow: 0 0 2px rgba(73, 168, 68, 1)
+
+  .checkbox-box-toggle
+    left: 1em
+    transform: rotate(360deg)
+    top: .1em
+		&::before, &::after
+      transition: 400ms all ease-in-out 50ms
+      box-sizing: border-box
+      backface-visibility: hidden
+
+/*shared
+
+.checkbox-box, .checkbox-box-toggle
+  border-radius: 3.12em
+
+/*'un':checked state
+
+.checkbox-box
+  height: 1em
+  width: 2em
+  min-width: 2em
+  background: rgba(43, 43, 43, .5)
+  position: relative
+  top: 0
+  left: 0
+  box-shadow: 0 0 2px rgba(43, 43, 43, 1)
+  display: inline-flex
+
+.checkbox-box-toggle
+  height: .8em
+  width: .8em
+  background: rgba(255, 255, 255, 1)
+  position: absolute
+  top: .1em
+  left: .1em
+  cursor: pointer
+  transition: 400ms all ease-in-out 50ms
+  box-sizing: border-box
+  backface-visibility: hidden
+  &::before, &::after
+	  transition: 400ms all ease-in-out 50ms
+	  box-sizing: border-box
+   	backface-visibility: hidden
+
+  &::before
+    content: ''
+    height: .48em
+    width: .1em
+    position: absolute
+    top: calc( 50% - .25em)
+    left: calc( 50% - 0.05em)
+    transform: rotate(45deg)
+
+  &::after
+    content: ''
+    height: .1em
+    width: .5em
+    position: absolute
+    top: calc( 50% - 0.05em)
+    left: calc( 50% - 0.25em)
+    transform: rotate(45deg)
+
+  &::before, &::after
+    background: rgba(43, 43, 43, 1)
+    border-radius: 0.31em
+
+/* pesduo class on toggle
+
+#checkbox-toggle[type="checkbox"]:checked ~ .checkbox-box .checkbox-box-toggle
+  &::before
+    height: .4em
+    top: calc(55% - .25em)
+    left: calc(60% - .015em)
+    background: rgba(73, 168, 68, 1)
+
+  &::after
+    width: .25em
+    top: calc(95% - .3em)
+    left: calc(22.5% - 0em)
+    background: rgba(73, 168, 68, 1)
+
+// #checkbox-toggle[type=checkbox]:invalid~.checkbox-box
+	// background-color: red
+
+///// CHECKBOX END
+
+// SIGN END
+
+// HEADER MAIN
+
+
+.head-title
+	font-size: 3.5em
+	font-weight: 600
+	font-family: newyorkm
+	font-stretch: normal
+	font-style: normal
+	line-height: 1.19
+	letter-spacing: normal
+	text-align: left
+	margin-top: 3.5em
+.bob
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		top: .2em
+		display: inline-block
+		width: .4em
+		height: .4em
+		background: url(../images/src/img/ico/bob.svg) no-repeat center
+		background-size: contain
+	
+.head-desc
+	font-weight: normal
+	font-stretch: normal
+	font-style: normal
+	font-size: 1.6em
+	line-height: 1.2
+	letter-spacing: normal
+	text-align: left
+.pattent
+	position: relative
+	&::before
+		content: ''
+		height: 20em
+		width: 20em
+		position: absolute
+		top: -7em
+		left: -7em
+		background: url(../images/src/img/pattern.svg) no-repeat
+		background-size: contain
+		background-position: left top
+		z-index: -5
+		opacity: .9
+	
+
+.head-btn
+	display: flex
+	flex-wrap: wrap	
+.btn-item
+	margin-top: .8em
+	margin-right: 1em
+
+.btn
+	padding: 1.25em 2em
+	border-radius: 0.62em
+	box-shadow: 0 0.12em .5em 0 rgba(0, 0, 0, 0.2)
+	background-color: #f9b034
+	display: flex
+	justify-content: center
+	align-items: center
+	color: #fff
+	line-height: 1
+	font-size: 1.25em
+	position: relative
+	transition:  .3s ease-in
+	&:hover
+		color: #fff
+		background: $accentinv
+		transition: .3s ease-in
+	&--inv
+		background-color:	$accentinv
+		&:hover
+			background-color: #f9b034
+	&--white
+		background-color:	#f1f1f1
+		color: #000
+		&:hover
+			background-color: #f9b034	
+
+
+.head-right
+	margin-bottom: -7em
+	margin-top: 6em
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	z-index: 
+.img-title
+	font-size: 2.4em
+	margin: 0
+.head-picture
+	width: 100%
+	height: 100%	
+.head-img
+	height: 35em
+	width: 18em
+	z-index: 1000
+
+.img-btn
+	display: flex
+	justify-content: center
+	width: 100%
+	z-index: 1
+.img-down-link
+	color: $white
+	margin-right: 0.8em
+	padding: .6em .9em
+	border: .05em solid $white
+	border-radius: .6em
+	transition: all .2s ease-in
+	&::before
+		content: ''
+		width: 1em
+		height: 1em
+		vertical-align: middle
+		margin-right: .1em
+		display: inline-block
+		background: url(../images/src/img/ico/google-play.svg) no-repeat 
+		background-position-y: center
+		background-size: cover
+		transition: all .2s ease-in
+	&--apple
+		&::before
+			background: url(../images/src/img/ico/apple-logo.svg) no-repeat
+			background-position-y: center
+			background-size: cover 
+	&:hover
+		border: .05em solid $accent
+		color: $accent
+		box-shadow: 0 0 0.1em 0.01em $accent
+
+		&::before
+			filter: brightness(0.5) sepia(1) hue-rotate(0deg) saturate(5)
+
+
+// HEADER MAIN END			
+
+// PROGRESS 	
+.line-prime
+	background: #0e0e0e
+	padding: 9em 0
+	text-align: center
+	&::before 
+		width: 100%
+		height: 100%
+		top: 50%
+		left: 50%
+		z-index: 0
+		transform: translate(-50%,-50%)
+		opacity: .05
+		background-size: contain
+		background-position: center
+
+.progress-item
+	background: $brownlight
+	border-radius: .8em
+	z-index: 222
+	opacity: 1
+	color: $white
+	padding: 1.2em
+	margin: .8em 0
+	transition: background-color .3s ease-in
+	&:hover
+		background-color: lighten($brownlight,10%)
+		.progress-picture
+			transform: scale(1.2)
+		.progress-title
+			color: $accent
+.head-progress-title
+	font-size: 1.5em
+	margin: 0
+
+.progress-title
+	height: 7em
+	min-height: 100%
+	transition: color .3s ease-in	
+.head-progress-desc
+	margin: 0
+
+.progress-img-box
+	display: flex
+	justify-content: center
+	min-height: 15em
+	max-height: 100%
+	align-items: center
+.progress-picture
+	max-width: 70%
+	max-height: 15em
+	width: fit-content
+	transition: transform .3s ease-in
+
+@media screen and ( max-width: 576px  )
+	.progress-img-box
+		width: 50%
+		margin: 0 auto		
+	
+// PROGRESS END
+
+
+// VIDEO  	
+
+.video-contain	
+	padding: 5em 0
+	background-color: $white
+
+.videot-title
+	display: flex
+	justify-content: center
+	font-size: 3em
+	font-weight: 700
+	font-stretch: normal
+	font-style: normal
+	line-height: 1.21
+	letter-spacing: normal
+	margin-bottom: 2em
+
+
+.videobit
+	border: .4em solid $brown
+	border-radius: 1.5em
+	margin: 0
+	padding: 0
+	width: 100%
+	height: auto
+	z-index: 2
+	outline: none
+	&:focus
+		outline: none
+
+// VIDEO END			
+
+// ECONOMY 	
+
+.economy,.commission
+	background: url(../images/src/img/bg/economy.svg) no-repeat 
+	background-size: cover
+	background-position: center
+	color: $white
+
+.economy-box
+	padding: 4em 0
+	width: 100%
+
+.economy-title
+	text-align: center
+
+.bitcoff-title
+	font-size: 3.5em
+	font-weight: 600
+	font-family: newyorkm
+	font-stretch: normal
+	font-style: normal
+	line-height: 1.19
+	letter-spacing: normal
+	&::after
+		filter:	invert(100%) contrast(150%)
+
+.economy-box-title
+	font-family: newyorkm
+	font-size: 2.5em
+	font-weight: 500
+  font-stretch: normal
+  font-style: normal
+  line-height: 1.2
+
+.economy-img
+	width: 100%	
+
+.economy-picture
+	width: 100%
+	height: auto
+	padding: 2em 0	
+
+
+.economy-desc-item
+	background: #4b0c81
+	padding: 1.2em
+	display: flex
+	justify-content: center
+	align-items: center
+	margin: 1em
+
+.paragraph
+	padding: .5em 
+	font-family: newyorkb
+	font-size: 6em	
+	line-height: 1
+
+.economy-inf
+	margin: 0
+	font-size: 1.55em
+
+
+
+
+// ECONOMY END		
+
+
+// SKEYTING 
+
+.skeyting
+	background: url(../images/src/img/bg/skeyting.svg) no-repeat 
+	background-size: cover
+	background-position: center
+	color: $textcolor
+	.bitcoff-title
+		&::after
+			filter: none
+
+// SKEYTING  END
+
+
+// SKEYTINGASK
+.skeytingask
+	background: $brown
+	color: $white
+	text-align: center
+	padding: 4em 0
+
+.skeyting-head
+	font-size: 2.5em
+	font-weight: normal	
+	margin-bottom: 1em	
+
+.whyskeyting
+	background-color: $brownlight
+	position: relative
+	overflow: hidden
+	&::after, &::before
+		z-index: 1
+		opacity: 0.1
+		height: 100%
+		background-size: cover
+		
+.whyskeyting-box
+	padding: 3em 0
+	text-align: left	
+
+.whyskeyting-title
+	font-size: 2.2em
+	font-weight: normal			
+.whyskeyting-desc
+	font-size: 1.5em
+	font-weight: normal
+
+.ask-title
+	font-size: 2.2em
+	font-weight: normal
+	margin-top: 1em	
+.ask-desc
+	font-size: 1.5em
+	font-weight: normal
+
+.ask-mess
+	border-radius: .4em
+	padding: 1em 5em
+	padding-left: 1em
+	max-width: 30em
+	width: 100%
+	border: none
+.ask-form-wrap
+	position: relative
+	display: flex
+	justify-content: center
+	max-width: 30em
+	text-align: center
+	margin: 0 auto
+
+.ask-form-lable
+	color: $accentinv
+	font-size: 1.2em
+	top: 0.6em
+	right: 1em
+	position: absolute
+	font-weight: 600
+	transition: all .3s ease-in
+	cursor: pointer
+	&:hover
+		color: lighten($accentinv, 20% )
+	&:active
+		color: darken($accentinv, 20%)
+
+// SKEYTINGASK END			
+
+// ROADMAP 
+.roadmap
+	text-align: center
+	background: url(../images/src/img/bg/economy.svg) no-repeat 
+	background-size: cover
+	background-position: center
+	color: $white
+	padding: 4em 0
+
+.roadmap-title
+	font-family: newyorkm
+	font-size: 2.5em
+	font-weight: 500
+	font-stretch: normal
+	font-style: normal
+	line-height: 1.2
+	margin-bottom: 2em
+
+.roadmap-item-title
+	font-size: 1.5em
+
+.roadmap-item-desc
+	text-align: initial
+	width: 100%
+	margin-bottom: 1em
+	font-size: 1em
+
+.roadmap-item-picture
+	object-fit: cover
+	height: 5em
+	filter: blur(.4em)
+	z-index: 500	
+
+.roadmap-item-img
+	position: relative
+	&::after
+		position: absolute
+		content: ''
+		top: 50%
+		z-index: 0
+		transform: translate(0,-50%)
+		background-color: #e045fd
+		display: block
+		right: -3.5em
+		width: 30%
+		height: 1em
+		filter: blur(.3em)
+		transition: all .3s ease-in	
+			
+	&::before
+		position: absolute
+		content: ''
+		top: 50%
+		z-index: 0
+		transform: translate(0,-50%)
+		background-color: #e045fd
+		display: block
+		width: 100%
+		height: 1em
+		filter: blur(.4em)
+		transition: all .3s ease-in
+
+.roadmap-item-img--none
+	&::after
+		display: none	
+
+.roadmap-item:hover
+	.roadmap-item-img	
+		&::before,&::after
+			background-color: $accent
+@media screen and ( max-width: 768px )
+	.roadmap-item-desc
+		text-align: center
+		padding: 0 2em
+	.roadmap-item-img	
+		width: 40%
+		margin: 0 auto
+		&::after
+			display: none
+
+// ROADMAP END	
+
+// ACHIVMENTS
+.achivments
+	text-align: center
+	padding: 3em 0
+.achivments-title
+	font-size: 2.5em
+	font-weight: 600	
+
+.achivments-desc
+	font-size: 1.5em
+	line-height: 1.2
+	font-weight: 600
+	.accentinv
+		font-family: newyorksb
+
+.achivments-item
+	padding: 1em
+	border-radius: 1.4em
+	box-shadow: 0 0.13em 0.75em 0 rgba(0, 0, 0, 0.15)
+	background-color: $white
+	margin: 1.2em	0
+	position: relative
+	transition: all ease-in 0.3s 
+	&:hover
+		transform: scale(1.03)
+
+.achivments-item-title
+	font-size: 1.3em
+	
+
+.achivments-item-desc
+	font-size: 1.7em
+	font-family: newyorksb	
+
+.achivments-item-img
+	width: 7em
+	height: 7em
+	border-radius: .5em	
+	margin-left: auto
+	margin-bottom: -3em
+
+.achivments-item-picture
+	object-fit: cover		
+	width: 100%
+	height: 100%
+
+.achivments-coffee-title
+	font-size: 1.7em
+	font-weight: 600
+	padding-left: 1.5em
+	margin: 1.5em 0
+
+.achivments-coffee-item	
+	border-radius: 0.8em
+	box-shadow: 0 0.13em 0.75em 0 rgba(0, 0, 0, 0.15)
+	background-color: $white	
+	text-align: left
+	padding: 1.5em
+	margin: 1.2em 0
+	transition: all ease-in 0.3s
+	overflow: hidden
+	&::before
+		z-index: 1
+		opacity: 1
+		height: 160%
+		background-size: contain
+		filter: brightness(0.9)
+	&::after
+		display: none	
+	&:hover
+		transform: scale(1.03)
+
+.paterndouble--accent
+	&::before
+		filter: brightness(0.5) sepia(1) hue-rotate(0deg) saturate(5)
+		opacity: 0.6
+
+
+
+
+.achivments-coffee-item-title
+	padding-left: 1.5em
+	font-size: 1.3em
+	font-family: newyorksb
+.achivments-coffee-item-address
+	font-size: 1.2em
+	padding-left: 1.5em
+	padding-right: 10em
+
+
+
+// ACHIVMENTS END				
+
+// POINT
+.point
+	background-color: $brown
+	color: $white
+	//overflow: hidden
+	padding: 4em 0
+	position: relative
+	&::after
+		z-index: 0
+		height: 100%
+		background-size: contain
+		opacity: .4
+		width: 20%
+	&::before
+		background: $brownlight
+		z-index: 0
+		right: 0
+		width: 40%
+		background-position: right
+		transform: none
+		top: 0
+		height: 100%
+	.container
+		z-index: 2
+
+.point-title
+	font-size: 2.5em			
+	font-weight: 500
+	font-family: newyorkm
+	font-stretch: normal
+	font-style: normal
+	line-height: 1.19
+
+.point-address
+	font-size: 1.2em
+
+.poing-generation
+	font-size: 2.5em
+	display: block
+	margin-bottom: 2em	
+
+.point-plan
+	font-size: 1.2em
+	font-family: newyorkb
+	margin-bottom: 2em
+	display: block 
+
+
+/* Slider */
+/* Собственно сам слайдер
+
+
+
+.slider
+  max-width: 100%
+  position: relative
+  height: 100%
+  margin-bottom: 8.125em
+  margin: auto
+  border-radius: .4em
+  overflow: hidden
+  z-index: 1000
+  .item img
+    object-fit: cover
+    width: 100%
+    height: 100%
+
+  .prev
+    cursor: pointer
+    position: absolute
+    top: 0
+    top: 50%
+    left: 0
+    width: auto
+    margin-top: -22px
+    padding: 16px
+    color: white
+    font-weight: bold
+    font-size: 18px
+    transition: 0.6s ease
+    border-radius: 0 3px 3px 0
+
+  .next
+    cursor: pointer
+    position: absolute
+    top: 0
+    top: 50%
+    width: auto
+    margin-top: -22px
+    padding: 16px
+    color: white
+    font-weight: bold
+    font-size: 18px
+    transition: 0.6s ease
+    border-radius: 0 3px 3px 0
+    right: 0
+    border-radius: 3px 0 0 3px
+
+  .prev:hover, .next:hover
+    background-color: rgba(0, 0, 0, 0.8)
+
+	
+
+
+/* Заголовок слайда */
+
+.slideText
+  position: absolute
+  color: #fff
+  font-size: 35px
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  text-shadow: 1px 1px 1px #000, 0 0 1em #000
+
+/* Кружочки*/
+
+.slider-dots
+  text-align: center
+
+.slider-dots_item
+  cursor: pointer
+  height: 0.75em
+  width: 0.75em
+  margin: 0 0.25em
+  background-color: #ddd
+  border-radius: 50%
+  display: inline-block
+  transition: background-color 0.6s ease
+
+.active, .slider-dots_item:hover
+  background-color: #aaa
+
+/* Анимация слайдов*/
+
+.slider .item
+  -webkit-animation-name: fade
+  -webkit-animation-duration: 1.5s
+  animation-name: fade
+  animation-duration: 1.5s
+
+@-webkit-keyframes fade
+  from
+    opacity: 0.4
+
+  to
+    opacity: 1
+
+@keyframes fade
+  from
+    opacity: 0.4
+
+  to
+    opacity: 1
+/* Slider end*/
+
+
+
+@media screen and ( max-width: 1000px )
+	.slider
+		border-radius: 2em
+	.point
+		text-align: center
+		&::after
+			display: none
+		&::before
+			display: none	
+
+
+// POINT END		
+
+
+// BITCOFFEE TEAM
+.bitcoffee-team-title-box
+	text-align: center
+	margin: 2em
+	margin-bottom: 4em
+
+.bitcoff-title--black
+	&::after
+		filter:	none
+
+.bitcoffee-team-item
+	padding: 1em	3em
+
+.bitcoffee-team-img
+	border-radius: .9em
+	height: 15em
+	overflow: hidden
+	position: relative
+	transition: all 0.3s ease-in
+	&::after
+		content: ''
+		background-color: $accent
+		width: 100%
+		height: 100%
+		z-index: 22
+		position: absolute
+		display: block
+		top: 0
+		opacity: 0.1
+
+	.bitcoffee-team-picture
+		object-fit: cover
+		width: 100%
+		height: 100%
+
+.bitcoffee-team-item-soc
+	font-size: 1.5em
+	display: flex
+	
+
+.bitcoffee-team-soc
+	border-radius: 100%
+	padding: .2em
+	font-weight: 900
+	width: 1.6em
+	display: flex
+	justify-content: center
+	line-height: 1
+	align-items: center
+	border: .1em solid $accent
+	color: $accent 
+	margin-bottom: .7em
+	margin-right: .4em
+	transition: all .3s ease-in 
+	&:hover
+		border: .1em solid $accentinv
+		color: $accentinv
+.bitcoffee-team-item-name
+	font-size: 1.7em
+	font-weight: 500
+	font-family: newyorkb
+	font-stretch: normal
+	font-style: normal
+	margin: .5em 0
+	display: inline-block
+
+.bitcoffee-team-item-desc
+	font-size: 1.3em
+	line-height: 1.2	
+	overflow: hidden
+	display: -webkit-box
+	-webkit-line-clamp: 3
+	-webkit-box-orient: vertical
+
+@media screen and ( max-width: 578px )
+	.bitcoffee-team-item	
+		.bitcoffee-team-img
+			height: 30em
+
+
+// BITCOFFEE TEAM END	
+
+// BITCOFFEE CONNECT	
+
+.bitcoffeen-connect
+	background-color: $brown
+	padding: 10em 0
+
+.bitcoffeen-connect-item
+	background-color: $white
+	padding: 2em
+	border-radius: 1.4em
+	min-height: 100%
+	display: flex
+	flex-direction: column
+	position: relative
+
+.bitcoffeen-connect-item-img
+	position: absolute
+	width: 50%
+	height: auto
+	right: 0
+	transform: translate(1%,-80%)
+.bitcoffeen-connect-item-picture
+	object-fit: cover
+	width: 70%
+	max-width: 8em	
+.bitcoffeen-connect-item-title
+	font-size: 1.5em
+	padding-top: 2em			
+
+.bitcoffeen-connect-item-desc
+	font-size: 1.1em
+.bitcoffeen-connect-item-bottom
+	font-size: 1.1em
+	font-weight: 900
+	margin-top: auto
+	text-align: center
+	margin-bottom: 1.2em		
+
+.bitcoffeen-connect-item-btn
+	background-color: $accent
+	color: $white
+	border-radius: .6em
+	transition: all .3s ease-in
+	&:hover
+		background-color: $accentinv
+.bitcoffeen-connect-item-link
+	display: flex
+	padding: .6em 1em
+	justify-content: center
+	align-items: center			
+	color: $white
+	font-size: 1.1em
+	&:hover
+		color: $white
+
+@media screen and ( max-width: 766px )
+	.bitcoffeen-connect-item-img
+		position: relative
+		transform: none
+		text-align: center
+		width: 100%
+	.bitcoffeen-connect-item
+		text-align: center
+		margin: 2em 
+		min-height: 95%
+	// BITCOFFEE CONNECT END		
+
+
+	// WHYTOKERNGROW 
+.whytokengrow
+	padding: 6em 0
+
+.whytokengrow-title
+	font-size: 2.1em
+	text-align: center
+	font-weight: 800
+	margin-bottom: 4em	
+
+.whytokengrow-item
+	background: rgb(115,36,205)
+	background: $accentinvgrad
+	color: $white
+	border-radius: 1.4em
+	padding: 3em
+	margin: 1.5em 0
+	box-shadow: 0 .2em .7em 0 rgba(0, 0, 0, 0.3)
+	
+
+.whytokengrow-item-title
+	font-size: 1.5em
+	font-weight: 600
+.whytokengrow-item-title
+	font-size: 1.4em
+
+.whytokengrow-why
+	font-size: 1.2em
+	margin-bottom: 1.2em
+
+.whytokengrow-item-why-one
+	font-weight: 900	
+	color: $accent		
+	padding-right: .4em
+.whytokengrow-item-link
+	color: $white
+	text-decoration: underline
+	transition: all .3s ease-in
+	&:hover
+		color: $accent
+.whytokengrow-item-desc
+	font-size: 1.3em
+	margin-bottom: 1em
+
+.tokenimg
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		background: url(../images/src/img/ico/tokenbff.svg) no-repeat 
+		background-size: cover
+		background-position: center
+		width: 7em
+		height: 7em
+		top: -2em
+		right: 2em
+
+	// WHYTOKERNGROW END	
+
+
+	// TOKEN ECONOMY
+.token-economy
+	padding: 5em 0
+	text-align: center
+
+.token-economy-title
+	font-size: 2.5em
+	font-family: newyorkm
+	margin-bottom: 2em
+	font-weight: 600
+
+
+.token-economy-table
+	display: flex	
+	max-width: 100%
+	position: relative
+	background-color: $gray
+	border: 0.1em solid darken($gray, 4%)
+	border-radius: .3em
+.token-economy-table-item
+	display: flex
+	flex-direction: column
+	width: 16.666%
+	border: 0.1em solid darken($gray, 4%)
+	border-top: none
+	border-bottom: none
+
+	&:first-child,&:last-child
+		border: none
+			
+
+.token-economy-item-title
+	font-size: 1.3em
+	line-height: 1.3
+	font-family: newyorkl
+	font-weight: 600
+	font-stretch: normal
+	color: $darkgray
+	border-bottom:  0.1em solid darken($gray, 4%)
+	display: flex
+	justify-content: center
+
+.token-economy-item-title,.token-economy-main
+	height: 50%
+	padding: 1.2em
+	align-items: center 
+
+.token-economy-main
+	display: flex
+	flex-direction: column
+	overflow: hidden
+
+.token-economy-main-title
+	font-size: 1.4em
+	font-weight: 900
+	font-family: newyorkl	
+.token-economy-hash
+	display: inline-flex
+	max-width: 100%
+	color: darken($gray, 30%)
+	font-size: .8em
+
+.token-economy-reserve
+	background-color: $brownlight
+	border-top: none
+	border-radius: 0 0 .3em .3em 
+	padding: 1.5em
+	margin-bottom: 7em
+.token-economy-reserve-title
+	font-size: 1.5em
+	font-weight: 900
+	font-family: newyorksb
+.token-economy-reserve-hash
+	margin: 0	
+	color: darken($gray, 20%)
+
+.token-economy-stat
+	font-family: newyork
+	font-size: 1.6em
+	text-align: center
+	padding: 0 3em 
+	line-height: 1.2
+.token-economy-stat-item
+	margin: 2em
+	border-bottom: 0.1em solid darken($gray, 4%)
+	padding-bottom: 2em 
+	&:last-child
+		border: none
+
+@media screen and ( max-width: 767px )
+	.token-economy-main-title
+		font-size: 1em
+	.token-economy-hash
+		font-size: .6em	
+
+// TOKEN ECONOMY END		
+
+
+
+// DOWNDLOAD APP
+.download-app
+	background-color: $brown
+	color: $white		
+	padding: 4em 0
+.download-app-title
+	font-size: 3.5em
+	margin-top: 1em
+.download-app-desc
+	font-size: 1.9em
+	margin-bottom: 4em	
+.download-app-btn
+
+.download-app-link
+	color: $brown
+	background-color: $white
+	font-size: 2em
+	font-weight: 900
+	letter-spacing: 1px
+	padding: .7em 3.5em
+	border-radius: .4em
+	box-shadow: 0 .19em .75em 0 rgba(0, 0, 0, 0.2)
+	transition: all 0.3s ease-in
+	&:hover
+		box-shadow: 0 .19em .75em 0 rgba(249, 176, 52, 0.2)
+		background-color: $accent		
+
+.download-app-img
+	display: flex
+	justify-content: flex-end
+	width: 70%
+
+.download-app-picture
+	object-fit: cover
+	width: 100%
+	height: 100%
+
+
+.pattern-bottom
+	position: relative
+	overflow: hidden
+	&::after
+		content: ''
+		height: 35em
+		width: 35em
+		background: url(../images/src/img/pattern.svg) no-repeat center
+		transform: translate(50%,-50%)
+		z-index: 2
+		opacity: .8
+		bottom: 0
+		top: 100%	
+		right: 0
+		position: absolute
+		background-size: contain	
+	&::before
+		content: ''
+		height: 35em
+		width: 35em
+		background: url(../images/src/img/pattern.svg) no-repeat center
+		transform: translate(-50%,-50%)
+		z-index: 2
+		opacity: .8
+		bottom: 0
+		top: 100%
+		left: 0	
+		position: absolute
+		background-size: contain	
+
+
+@media screen and ( max-width: 767px )
+	.download-app,.download-app-left
+		text-align: center
+		justify-content: center
+	.download-app-right
+		display: flex
+		text-align: center
+		justify-content: center
+	.download-app-img
+		width: 50%
+		margin-top: 1em
+
+
+// DOWNDLOAD APP END		
+
+
+// CONTACT 
+
+.contacts
+	padding: 4em 0
+	text-align: center
+	&::after,&::before
+		top: 0
+		bottom: 100%
+		
+
+.contacts-title
+	font-size: 2.5em	
+
+.contact-desc
+	font-size: 1.7em
+
+.contacts-form
+	display: flex
+	flex-direction: column
+	padding: 2em
+	align-items: center
+
+.contacts-input
+	margin: .8em 0
+	font-size: 1.5em
+	border-radius: .3em
+	padding: .2em .5em
+	width: 70%
+	border: .1em solid $gray
+	box-shadow: 0 .19em .75em 0 rgba(0, 0, 0, 0.15)
+	transition: all 0.3s ease-in
+	font-family: newyorkm
+	&:focus
+		box-shadow: 0 .19em .75em 0 rgba(249, 176, 52, 0.15)	
+
+.contacts-link
+	background-color: $accent
+	color: $white
+	font-size: 1.5em
+	padding: .5em 2em
+	border: none
+	border-radius: .4em
+	box-shadow: 0 .19em .75em 0 rgba(0, 0, 0, 0.15)
+	transition: all .3s ease-in
+	&:hover
+		background-color: lighten($accent, 5% )
+	&:active
+		box-shadow: 0 .19em .75em 0 rgba(249, 176, 52, 0.15)
+		background: $accentinv	
+	&:focus
+		border: $accentinv	!important
+// CONTACT END				

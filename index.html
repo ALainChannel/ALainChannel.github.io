@@ -14,13 +14,14 @@
 
 <body>
 
-<header class="head paterndouble">
-	<div class="container">
+<header class="head">
+	<div class="paterndouble paterndouble-top"></div>
+	<div class="container ">
 		<div class="row">
-			<div class="col-lg-3 col-12">
+			<div class="col-lg-2 col-12">
 				<div class="logo"><a href="" class="logolink"><img src="./images/src/img/logo.svg" alt="" class="logoimg"></a></div>
 			</div>
-			<div class="col-lg-7 col-9">
+			<div class="col-lg-7 col-8">
 				<nav class="menu">
 					<ul class="menu-list">
 						<li class="menu-item"><a href="" class="menu-link">Обзор</a> </li>
@@ -30,6 +31,30 @@
 					</ul>
 				</nav>
 			</div>
+
+		<div class="col-lg-1" style="align-self: center;">
+			<div class="select_wrap">
+				<ul class="default_option">
+						<li>
+								<div class="option">
+									<div class="icon"></div>
+								</div>
+						</li>
+				</ul>
+				<ul class="select_ul">
+						<li>
+								<div class="option ru">
+									<div class="icon"></div>
+								</div>
+						</li>
+						<li>
+								<div class="option en">
+									<div class="icon"></div>
+								</div>  
+						</li>
+				</ul>
+		</div>
+		</div>
 			<div class="col-lg-2 col-3">	
 				<div class="sing"><a href="#" rel="sign-in" class="show_popup sign-link">
 					<i class="icosing">
@@ -53,9 +78,11 @@
 						<h3 class="sign-title">Авторизация в <span class="sign-title-bff accentinv">BFF Online <i class="icosing"><div class="icosingbor"></div><div class="icosingbor icosingbor-accent"></div><div class="icosingbor"></div><div class="icosingbor"></div></i> </span></h3>
 						<form action="" class="sign-form">
 							<div class="sign-form-wrap-input">
+								<label class="line-mess line-mess-red" for="reg-name">нехуй тут писать</label>
 							<input type="text" name="" id="" class="sign-form-input" placeholder="Логин" required>
 						</div>
 						<div class="sign-form-wrap-input">
+							<label class="line-mess line-mess-red" for="reg-name">нехуй тут писать</label>
 							<input type="password" name="" id="" class="sign-form-input" placeholder="Пароль" required>
 						</div>
 						<p class="sign-form-input-desc sign-form-input-desc--soc">Войти с помощью соцсетей</p>
@@ -80,11 +107,21 @@
 			<h3 class="sign-title">Создание аккаунта в <span class="sign-title-bff accent">BFF Online <i class="icosing"><div class="icosingbor"></div><div class="icosingbor icosingbor-accent"></div><div class="icosingbor"></div><div class="icosingbor"></div></i> </span></h3>
 			<form action="" class="sign-form">
 				<div class="sign-form-wrap-input">
-				<input type="text" name="" id="" class="sign-form-input" placeholder="Имя" required>
-			</div>
+					<label class="line-mess line-mess-red" for="reg-name">нехуй тут писать</label>
+				<input type="text" name="" id="reg-name" class="sign-form-input" placeholder="Имя" required>
+				</div>
+				<div class="sign-form-wrap-input">
+					<label class="line-mess line-mess-red" for="reg-name">нехуй тут писать</label>
 				<input type="email" name="" id="" class="sign-form-input" placeholder="Email" required>
+			</div>
+				<div class="sign-form-wrap-input">
+					<label class="line-mess line-mess-red" for="reg-name">нехуй тут писать</label>
 				<input type="password" name="" id="" class="sign-form-input" placeholder="Пароль" required>
+			</div>
+				<div class="sign-form-wrap-input">
+					<label class="line-mess line-mess-red" for="reg-name">нехуй тут писать</label>
 				<input type="password" name="" id="" class="sign-form-input" placeholder="Повторите пароль" required>
+			</div>
 				<div class="checkbox-wrap">
 					<input type="checkbox" id="checkbox-toggle" required/>
 					<div class="checkbox-box">
@@ -107,7 +144,10 @@
 		<div class="sign-left">
 			<h3 class="sign-title">Востановелние доступа к <span class="sign-title-bff accentinv">BFF Online <i class="icosing"><div class="icosingbor"></div><div class="icosingbor icosingbor-accent"></div><div class="icosingbor"></div><div class="icosingbor"></div></i> </span></h3>
 			<form action="" class="sign-form">
+				<div class="sign-form-wrap-input">
+					<label class="line-mess line-mess-red" for="reg-name">нехуй тут писать</label>
 				<input type="email" name="" id="" class="sign-form-input" placeholder="Email" required>
+			</div>
 				<p class="sign-form-input-desc">Пожалуйста, укажите Ваш Email по которому была произведена регистрация аккаунта ранее.</p>
 				<input type="submit" value="Отправить" class="sign-form-submit">
 			</form>
@@ -166,20 +206,64 @@
 		</div>
 		</div>
 
-		<div class="sign happy-wheel " style="display: none;" >
+		<div class="sign happy-wheel"  style="display: none;">
 			<div class="sign-popup">
 			<i class="popup-close">×</i>
-			<div class="sign-left">
+			<div class="sign-left wheel-pol">
 				<div class="box-wheel">
-					
+					<div class="wheel">
+						<div class="wheel__inner">
+								<div class="wheel__sec">
+									<div class="wheel__sec__title">0.05BFF</div>
+								</div>
+								<div class="wheel__sec">
+									<div class="wheel__sec__title">0.05BFF</div>
+								</div>
+								<div class="wheel__sec">
+									<div class="wheel__sec__title">0.05BFF</div>
+								</div>
+								<div class="wheel__sec">
+									<div class="wheel__sec__title">0.05BFF</div>
+								</div>
+								<div class="wheel__sec">
+									<div class="wheel__sec__title">0.05BFF</div>
+								</div>
+								<div class="wheel__sec">
+									<div class="wheel__sec__title">0.05BFF</div>
+								</div>
+								<div class="wheel__sec">
+									<div class="wheel__sec__title">0.05BFF</div>
+								</div>
+								<div class="wheel__sec">
+									<div class="wheel__sec__title">0.05BFF</div>
+								</div>
+								<div class="wheel__sec">
+									<div class="wheel__sec__title">0.05BFF</div>
+								</div>
+								<div class="wheel__sec">
+									<div class="wheel__sec__title">0.05BFF</div>
+								</div>
+								<div class="wheel__sec">
+									<div class="wheel__sec__title">0.05BFF</div>
+								</div>
+								<div class="wheel__sec">
+									<div class="wheel__sec__title">0.05BFF</div>
+								</div>
+						</div>
+						<div class="wheel__point">
+						</div>
+						<div class="wheel__arrow">
+						</div>
+				</div>
 				</div>
 			</div>
 			<div class="sign-left">
-				<form action="" class="sign-form">
+				<p class="wheel-title">Испытай свою удачу!</p>
+				<form action="" id="wheel-check" class="sign-form">
 					<input type="text" name="" id="" class="sign-form-input" placeholder="Имя" required>
-					<input type="phone" name="" id="" class="sign-form-input" placeholder="Номер телефона" required>
-					<p class="sign-form-input-desc">После изменения пароля старый пароль будет не действителен.</p>
-					<input type="submit" value="Крутить барабан" class="sign-form-submit">
+					<input type="text" name="" id="" class="sign-form-input" placeholder="Номер телефона" required>
+					<p class="sign-form-input-desc">Испытать удачу могут только зарегистрированные пользователи</p>
+					<input type="submit" value="Крутить барабан" class="wheel__button sign-form-submit" >
 				</form>
 			</div>
 			</div>
@@ -270,9 +354,9 @@
 <section class="video-contain">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12">
+			<div class="col-lg-10 offset-lg-1">
 				<h2 class="videot-title">Коротко о нашей системе.</h2>
-					<video src="./images/src/img/bitcoffeen.mp4" class="videobit" controls></video>
+					<video src="./images/src/img/bitcoffeen.mp4" poster="./images/src/img/bg/videobg.png" class="videobit" controls></video>
 			</div>
 		</div>
 	</div>
@@ -290,11 +374,11 @@
 				<div class="economy-desc">
 					<div class="economy-desc-item">
 						<span class="paragraph">1</span>
-						<p class="economy-inf">При подключении кофейни к системе BFF, она покупает на бирже 1000 BFF  при цене минимум 11= 1 токен BFF. На эти токены она сможет сформировать 10 000  кодов для своих клиентов. 0.1 BFF за каждую кружку кофе отдает своему покупателю кофе.</p>
+						<p class="economy-inf">При подключении кофейни к системе BFF, она покупает на бирже 1000 BFF  при цене минимум 1$= 1 токен BFF. На эти токены она сможет сформировать 10 000  кодов для своих клиентов. 0.1 BFF за каждую кружку кофе отдает своему покупателю кофе.</p>
 					</div>
 					<div class="economy-desc-item">
 						<span class="paragraph">2</span>
-						<p class="economy-inf">При подключении кофейни к системе BFF, она покупает на бирже 1000 BFF  при цене минимум 12= 1 токен BFF. На эти токены она сможет сформировать 10 000  кодов для своих клиентов. 0.1 BFF за каждую кружку кофе отдает своему покупателю кофе.</p>
+						<p class="economy-inf">При подключении кофейни к системе BFF, она покупает на бирже 1000 BFF  при цене минимум 1$= 1 токен BFF. На эти токены она сможет сформировать 10 000  кодов для своих клиентов. 0.1 BFF за каждую кружку кофе отдает своему покупателю кофе.</p>
 					</div>
 				</div>
 			</div>
@@ -510,7 +594,7 @@
 			<div class="col-lg-5">
 				<h3 class="point-title">У нас есть <br> собственная точка.</h3>
 				<address class="point-address">которая расположена по адресу в Москве <br> <i>ул. Нижняя Масловка, 5, корп. 5 - переезд в ТЦ «Бирюлевский» ул. Бирюлевская, 43.</i> </address>
-				<span class="poing-generation">которая генерирует...</span><br>
+				<span class="poing-generation">которая сгенерировала 8350 QR кодов...</span><br>
 				<span class="point-plan accent">План в течение 3-х месяцев планируется открыть от 10 - 15 кофеен в крупных городах России.</span>
 			</div>
 			<div class="col-lg-7">
@@ -553,8 +637,173 @@
 				<span class="bitcoff-title bitcoff-title--black bob">Bitcoffeen</span>
 				<h2 class="bitcoffee-team-title">Наша команда</h2>
 			</div>
-		</div>	
-			<div class="col-lg-4 col-sm-6">
+		</div>
+		
+		<div class="col-lg-12">
+				<div class="blog-card">
+					<div class="meta">
+						<div class="photo" style="background-image: url(./images/src/img/team/Martin.jpg)"></div>
+						<ul class="details">
+							<li class="author"><a href="#">Martin Riz</a></li>
+							<li class="date">Aug. 24, 2015</li>
+							<li class="tags">
+								<ul>
+									<li><a href="#">facebook</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="description">
+						<h3>Martin Riz</h3>
+						<span>Founder</span>
+						<p>Является экспертом в сфере анализа данных, повышения эффективности бизнес- процессов и управления активами компаний. Обладает высоким уровнем знаний по финансовому анализу. Осуществляет умелый подбор IT-персонала в команду, наряду с успешной разработкой коммерческих веб-проектов от этапа планирования... </p>
+						<p class="read-more">
+							<a href="#">Read More</a>
+						</p>
+					</div>
+				</div>
+				<div class="blog-card alt">
+					<div class="meta">
+						<div class="photo" style="background-image: url(./images/src/img/team/Veniamin.jpg)"></div>
+						<ul class="details">
+							<li class="author"><a href="#">Safonov Veniamin</a></li>
+							<li class="date">July. 15, 2015</li>
+							<li class="tags">
+								<ul>
+									<li><a href="#">Learn</a></li>
+									<li><a href="#">Code</a></li>
+									<li><a href="#">JavaScript</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="description">
+						<h3>Safonov Veniamin</h3>
+						<span>Founder</span>
+						<p>Эксперт, сочетающий всестороннее понимание технологии блокчейна в целом и криптовалютных бирж в частности. Обладает доскональными знаниями компьютерных технологий и веб-разработки. Имеет многолетний опыт майнинга криптовалюты и торговли на крупных мировых криптобижах. Способен управлять всеми аспектами...</p>
+						<p class="read-more">
+							<a href="#">Read More</a>
+						</p>
+					</div>
+				</div>
+				<div class="blog-card">
+					<div class="meta">
+						<div class="photo" style="background-image: url(./images/src/img/team/SergeyK.png)"></div>
+						<ul class="details">
+							<li class="author">Sergio S Kotoff</li>
+							<li class="date">Aug. 24, 2015</li>
+							<li class="tags">
+								<ul>
+									<li><a href="#">facebook</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="description">
+						<h3>Sergio S Kotoff</h3>
+						<span>Co-Founder</span>
+						<p>Является учредителем OOORK CAPITAL GROUP LTD (Новая Зеландия). Осуществляя руководство компанией в качестве генерального управляющего, стремится к ее продвижению в лидирующие позиции мировой кофейной индустрии. Обладает большим опытом в управлении многочисленными коллективами с различной направленностью деятельности...</p>
+						<p class="read-more">
+							<a href="#">Read More</a>
+						</p>
+					</div>
+				</div>
+				<div class="blog-card alt">
+					<div class="meta">
+						<div class="photo" style="background-image: url(./images/src/img/team/Dmitryi.png)"></div>
+						<ul class="details">
+							<li class="author"><a href="#">Dmitriy Isaenko</a></li>
+							<li class="date">July. 15, 2015</li>
+							<li class="tags">
+								<ul>
+									<li><a href="#">Learn</a></li>
+									<li><a href="#">Code</a></li>
+									<li><a href="#">JavaScript</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="description">
+						<h3>Dmitriy Isaenko</h3>
+						<span>Crypto-Coin/Back-end Developer’s</span>
+						<p>Специалист в сфере блокчейн технологий и трейдер с большим количеством бизнес навыков, необходимых для управления многоуровневой организацией. Совладелец дата-центра SOHO invest, организатор прямых поставок из Китая оборудования для майнинга, имеет многолетний опыт в сфере майнинга...</p>
+						<p class="read-more">
+							<a href="#">Read More</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="blog-card">
+				<div class="meta">
+					<div class="photo" style="background-image: url(./images/src/img/team/SergeyZ.jpg)"></div>
+					<ul class="details">
+						<li class="author">Sergey Zhukov</li>
+						<li class="date">May. 16, 1997</li>
+						<li class="tags">
+							<ul>
+								<li><a href="#">facebook</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="description">
+					<h3>Sergey Zhukov</h3>
+					<span>Full Stack Developer’s</span>
+					<p>Молодой и динамичный специалист в области Front-end и Back-end разработки. С использованиеи технологии PHP, Python, MySQL, Flutter, для разработки сервисов с поддержкой блокчейн технологии. Несмотря на молодой возраст является опытным девелопером, посвятившим себя проектированию и разработке... </p>
+					<p class="read-more">
+						<a href="#">Read More</a>
+					</p>
+				</div>
+			</div>
+			<div class="blog-card alt">
+				<div class="meta">
+					<div class="photo" style="background-image: url(./images/src/img/team/Oleg.jpg)"></div>
+					<ul class="details">
+						<li class="author"><a href="#">Digaev Oleg</a></li>
+						<li class="date">July. 15, 2015</li>
+						<li class="tags">
+							<ul>
+								<li><a href="#">Learn</a></li>
+								<li><a href="#">Code</a></li>
+								<li><a href="#">JavaScript</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="description">
+					<h3>Digaev Oleg</h3>
+					<span>Regional Manager</span>
+					<p>Специалист по Digital маркетингу и рекламе, эксперт по управлению цифровыми активами. Профессиональные интересы лежат в области продвижения криптовалютных проектов. Опытный консультант ICO проектов. Обладает опытом ведения деловых переговоров является непревзойденным лидером по продвижению проектов в социальных сетях и с использованием SEO</p>
+					<p class="read-more">
+						<a href="#">Read More</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="blog-card">
+			<div class="meta">
+				<div class="photo" style="background-image: url(./images/src/img/team/Irina.png)"></div>
+				<ul class="details">
+					<li class="author">Sergey Zhukov</li>
+					<li class="date">May. 16, 1997</li>
+					<li class="tags">
+						<ul>
+							<li><a href="#">facebook</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="description">
+				<h3>Sergey Zhukov</h3>
+				<span>Full Stack Developer’s</span>
+				<p>Молодой и динамичный специалист в области Front-end и Back-end разработки. С использованиеи технологии PHP, Python, MySQL, Flutter, для разработки сервисов с поддержкой блокчейн технологии. Несмотря на молодой возраст является опытным девелопером, посвятившим себя проектированию и разработке... </p>
+				<p class="read-more">
+					<a href="#">Read More</a>
+				</p>
+			</div>
+		</div>
+
+			<!-- <div class="col-lg-4 col-sm-6">
 				<div class="bitcoffee-team-item">
 					<div class="bitcoffee-team-img"><img src="./images/src/img/team/Veniamin.jpg" alt="" class="bitcoffee-team-picture"></div>
 					<span class="bitcoffee-team-item-name">Martin Riz</span>
@@ -601,7 +850,7 @@
 					<div class="bitcoffee-team-item-soc"><a href="" class="bitcoffee-team-soc">f</a><a href="" class="bitcoffee-team-soc">vk</a></div>
 					<p class="bitcoffee-team-item-desc">Является экспертом в сфере анализа данных, повышения эффективности бизнес-процессов и управления активами компаний. Обладает высоким уровнем знаний по финансовому анализу. а в команду, наряду с успешной разработкой коммерческих веб-проектов от этапа планирования до запуска и построения маркетингового плана, его продвижения на рынке. Колоссальный опыт способствует успешному применению и достижению поставленных целей проекта Bitcoffeen.</p>
 				</div>
-			</div>
+			</div> -->
 
 		</div>
 	</div>
@@ -618,7 +867,7 @@
 					<div class="bitcoffeen-connect-item-img"><img src="./images/src/img/ico/invest.png" alt="Инвестор" class="bitcoffeen-connect-item-picture"></div>
 					<h3 class="bitcoffeen-connect-item-title">Инвесторам</h3>
 					<p class="bitcoffeen-connect-item-desc">Выберите свой тариф, с минимальными рисками так как вы вкладываете ваши средства в  реальный бизнес, который публично виден всем, всю нашу сеть кофеен мы всегда отображаем на интерактивных картах и вы можете с легкостью определить масштаб нашего бизнеса.</p>
-					<span class="bitcoffeen-connect-item-bottom accentinv">До шести тарифных планов</span>
+					<span class="bitcoffeen-connect-item-bottom accentinv">До десяти тарифных планов</span>
 					<div class="bitcoffeen-connect-item-btn"><a href="" class="bitcoffeen-connect-item-link">Подробнее</a></div>
 				</div>
 			</div>

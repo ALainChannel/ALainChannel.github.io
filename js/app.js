@@ -1,28 +1,140 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 
-	const Toast = Swal.mixin({
-		toast: true,
-		position: 'top-end',
-		showConfirmButton: false,
-		timer: 3000,
-		timerProgressBar: true,
-		onOpen: (toast) => {
-			toast.addEventListener('mouseenter', Swal.stopTimer)
-			toast.addEventListener('mouseleave', Swal.resumeTimer)
-		}
-	})
-	
-	Toast.fire({
-		icon: 'success',
-		title: 'Signed in successfully'
-	})
-
-
-
-
-
 });
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//* Alert */
+const Toast = Swal.mixin({
+	toast: true,
+	position: 'top-end',
+	showConfirmButton: false,
+	timer: 3000,
+	timerProgressBar: true,
+	onOpen: (toast) => {
+		toast.addEventListener('mouseenter', Swal.stopTimer)
+		toast.addEventListener('mouseleave', Swal.resumeTimer)
+	}
+})
+
+Toast.fire({
+	icon: 'success',
+	title: 'Signed in successfully'
+})
+
+
+const Gift =	Swal.mixin({
+	title: 'Вы выиграли',
+	text: 'Ваш приз составил 0,05BFF',
+	imageUrl: './images/src/img/ico/surprise.svg',
+	imageWidth: 400,
+	imageHeight: 200,
+	imageAlt: 'Custom image',
+})
+
+//* Alert end */
+
+
+
+////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//* WHEEL HAPPY */
+var value = 0;
+var countClicked = 0;
+var clicked = false;
+function getPosition(position) {
+		if (position <= 30) {
+			$('.overlay_popup, .sign').hide();
+			Gift.fire({
+				text: 'Ваш приз составил 0,005BFF',
+			})
+		}
+		else if (position <= 90) {
+			$('.overlay_popup, .sign').hide();
+			Gift.fire({
+				text: 'Ваш приз составил 0,005BFF',
+			})
+		}
+		else if (position <= 150) {
+			$('.overlay_popup, .sign').hide();
+			Gift.fire({
+				text: 'Ваш приз составил 0,005BFF',
+			})
+		} else if (position <= 210) {
+			$('.overlay_popup, .sign').hide();
+			Gift.fire({
+				text: 'Ваш приз составил 0,005BFF',
+			})
+		} else if (position <= 270) {
+			$('.overlay_popup, .sign').hide();
+			Gift.fire({
+				text: 'Ваш приз составил 0,005BFF',
+			})
+		}
+		else if (position <= 330) {
+			$('.overlay_popup, .sign').hide();
+			Gift.fire({
+				text: 'Ваш приз составил 0,005BFF',
+			})
+		}
+		else {
+			$('.overlay_popup, .sign').hide();
+			Gift.fire({
+				text: 'Ваш приз составил 0,005BFF',
+			})
+		}
+		clicked = false;
+		countClicked = 0;
+}
+$('.wheel__button').click(function () {
+	$('#wheel-check').submit(function (e) {
+    e.preventDefault();
+		if (clicked == true) {
+				countClicked++;
+		}
+		else {
+				let random = Math.floor((Math.random() * 360) + 720);
+				value += random;
+				console.log(random % 360);
+				console.log(value % 360);
+				$(".wheel__inner").css("transform", `rotate(${value}deg)`);
+				setTimeout(() => {
+						//Chia lấy dư cho 360 để lấy lượng quay không hoàn thành một vòng 360deg
+						getPosition(value % 360);
+				}, 5000);
+		}
+		clicked = true;
+	})
+})
+
+
+//* WHEEL HAPPY  End*/
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+//* Select*/
+$(".default_option").click(function(){
+  $(this).parent().toggleClass("active");
+})
+
+$(".select_ul li").click(function(){
+  var currentele = $(this).html();
+  $(".default_option li").html(currentele);
+  $(this).parents(".select_wrap").removeClass("active");
+})
+//* Select end*/
+
+
+///////////////////////////////////////////////////////////////////////////////////
+
+
 
 
 //* POPUP */
@@ -104,3 +216,6 @@ function autoSlider() {
 
 
 //* SLIDER  END*/
+
+
+///////////////////////////////////////////////////////////////////////////

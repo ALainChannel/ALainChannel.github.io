@@ -96,12 +96,20 @@ header
 		.icosing
 			width: 20px
 			height: 20px
-
+@media screen and ( max-width: 1200px)
+	.icosing
+	.menu
+		justify-content: center
+	.logo
+		display: flex
+		align-items: center
+		justify-content: center	
 // SELECT
 
 .select_wrap 
 	position: relative 
 	user-select: none
+	width: 5em
 	.default_option 
 		background: #fff 
 		border-radius: 5px 
@@ -113,7 +121,7 @@ header
 			content: "" 
 			position: absolute 
 			top: 48%
-			right: 18px 
+			right: 1em
 			width: 6px 
 			height: 6px 
 			border: 2px solid 
@@ -168,7 +176,9 @@ header
 			&:before 
 				top: 48% 
 				transform: rotate(-225deg) 
-
+@media screen and ( max-width: 768px)
+	.select_wrap
+		width: 6.5em 
 
 
 
@@ -811,10 +821,11 @@ header
 	font-size: 2.4em
 	margin: 0
 .head-picture
-	width: 100%
-	height: 100%
+	width: 95%
+	height: 98%
 	box-shadow: 0 .5em 3em 0 rgba(0, 0, 0, 0.25)
-	border-radius: 1.2em	
+	border-radius: 1.2em
+	object-fit: fill	
 .head-img
 	height: 35em
 	width: 17em
@@ -1015,7 +1026,7 @@ video[poster]
 .paragraph
 	padding: .5em 
 	font-family: newyorkb
-	font-size: 4em	
+	font-size: 3.5em	
 	line-height: 1
 
 .economy-inf
@@ -1737,8 +1748,14 @@ $color_grey_dark: #a2a2a2
     
   
 
-
-
+.blog-card-btn
+	margin: 1em auto
+	border: none
+	font-size: 1em !important
+	display: flex
+	&:active,&:focus
+		outline: none
+		border: none
 
 
 
@@ -2127,8 +2144,141 @@ $color_grey_dark: #a2a2a2
 	color: $brown
 	&__title
 		text-align: center
+	&__desc
+		color: $brown
+		&__title
+			color: $accent
+			&::before
+				content: ""
+				background-image: url(/images/src/img/ico/stikfloo.svg)
+				width: 3em
+				height: 2em
+				margin-bottom: -.5em
+				background-size: contain
+				display: inline-block
+				background-repeat: no-repeat
+				margin-left: -1.5em
+				margin-right: .8em
+		&__box
+			background: #ede8dd
+			border-radius: .5em
+			padding: 2em
+			margin: 1em 0
+			&__title
+				color: $brown
+				font-size: 1.4em
+			&__img
+				margin: 2em auto
+				width: 60%
+			&__picture
+				width: 100%
+				height: auto
+				object-fit: cover
+			&__list
+				display: flex
+				align-items: center
+				justify-content: center
+				height: 100%
+				width: 100%
+				//border-left: .03em solid  lighten($brownlight, 30%)
+				li
+					list-style-type: decimal
+					font-size: 1.2em
+					line-height: 2
+		span
+			color: $brownlight		
+		&__math
+			&__img
+				width: 30%
+			&__picture
+				width: 100%
+				height: auto
+				object-fit: cover
+			&__box
+				display: flex
+				justify-content: center
+				align-items: center
+				p
+					margin: 0
+					margin-left: 1em
 
+		&__table
+			background: #ede8dd
+			border-radius: .5em
+			padding: 2em
+			margin: 1em 0
+			font-size: 1em
+			text-align: center
+			span
+				color: darken($brown,5%)
+				font-size: .8em
+				font-weight: 900
+				a
+					color: $brown
+					text-decoration:	underline
+					transition: color .3s ease-in
+					&:hover
+						color: $accent
+					&:visited
+						color: lighten($brown, 30% )	
+			p	
+				font-size: .7em
+				text-align: left
+			&__column
+				display: flex
+				flex-direction: column
+				margin: 1em 0
+				&_span
+					margin-top: auto
+
+
+@media screen and ( max-width: 768px )
+	.whitepaper__desc__table__column
+		align-items: center
 
 // WHITEPAPER END
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////	
+
+//WALLET 
+
+.wallet
+	text-align: center
+	margin-top: 4em
+	color: #2e1a1a
+	&-svg
+		object-fit: cover
+		height: 15em
+	&-title
+		font-size: 2em
+	&-item
+		background: $accent
+		border-radius: .6em
+		padding: 4em 1em
+		box-shadow: 0 0.6em 2em 0 rgba(0,0,0,.2)
+		transition: all .3s ease-in
+		color: $brown
+		margin-bottom: 2em
+		&:hover
+			box-shadow: 0 0.6em 2em 0 rgba(249,176,52,.2)
+			background: lighten($accent,5% )
+			border-radius: 50%
+		&-img
+			width: 50%
+			margin: 0 auto
+
+		&-picture
+			width: 100%
+			height: 7em
+			object-fit: contain
+			fill: #2e1a1a
+		&-title
+			font-size: 1.2em
+			color: #2e1a1a
+		&-link
+			width: 100%
+			height: 100%	
+
+//WALLET END
+	
+///////////////////////////////////////////////////////////////////////////////////////////////////////

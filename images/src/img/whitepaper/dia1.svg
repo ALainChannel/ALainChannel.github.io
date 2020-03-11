@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="864.9" height="338.729" viewBox="0 0 864.9 338.729">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:#2d191a;font-family:MyanmarMN-Bold,Myanmar MN;font-weight:700}.cls-1{font-size:15px}.cls-2{font-size:14px}.cls-3,.cls-4{fill:none;stroke:#2d191a;stroke-linecap:round}.cls-3{opacity:.396}.cls-4{opacity:.157}.cls-5{fill:#f9b034}.cls-6{fill:#371f18}.cls-7{fill:#a5622a}.cls-8{fill:#a58a73}
+        </style>
+    </defs>
+    <g id="Group_3484" data-name="Group 3484" transform="translate(-517 -5574.271)">
+        <text id="_100_BFF" class="cls-1" data-name="100 BFF" transform="translate(632 5906)">
+            <tspan x="0" y="0">100 BFF</tspan>
+        </text>
+        <text id="_300_BFF" class="cls-1" data-name="300 BFF" transform="translate(789 5906)">
+            <tspan x="0" y="0">300 BFF</tspan>
+        </text>
+        <text id="_500_BFF" class="cls-1" data-name="500 BFF" transform="translate(946 5906)">
+            <tspan x="0" y="0">500 BFF</tspan>
+        </text>
+        <text id="_1000_BFF" class="cls-1" data-name="1000 BFF" transform="translate(1103 5906)">
+            <tspan x="0" y="0">1000 BFF</tspan>
+        </text>
+        <text id="_3000_BFF" class="cls-1" data-name="3000 BFF" transform="translate(1260 5906)">
+            <tspan x="0" y="0">3000 BFF</tspan>
+        </text>
+        <text id="_1800" class="cls-2" data-name="1800" transform="translate(549 5602)">
+            <tspan x="-31.254" y="0">1800</tspan>
+        </text>
+        <text id="_1350" class="cls-2" data-name="1350" transform="translate(549 5672)">
+            <tspan x="-31.254" y="0">1350</tspan>
+        </text>
+        <text id="_900" class="cls-2" data-name="900" transform="translate(549 5742)">
+            <tspan x="-23.44" y="0">900</tspan>
+        </text>
+        <text id="_450" class="cls-2" data-name="450" transform="translate(549 5812)">
+            <tspan x="-23.44" y="0">450</tspan>
+        </text>
+        <text id="_0" class="cls-2" data-name="0" transform="translate(549 5882)">
+            <tspan x="-7.813" y="0">0</tspan>
+        </text>
+        <path id="Path_4765" d="M18336.486 820.888h771.9" class="cls-3" data-name="Path 4765" transform="translate(-17726.988 5057)"/>
+        <path id="Path_4766" d="M18336.486 820.888h771.9" class="cls-4" data-name="Path 4766" transform="translate(-17726.988 4987)"/>
+        <path id="Path_4767" d="M18336.486 820.888h771.9" class="cls-4" data-name="Path 4767" transform="translate(-17726.988 4917)"/>
+        <path id="Path_4768" d="M18336.486 820.888h771.9" class="cls-4" data-name="Path 4768" transform="translate(-17726.988 4847)"/>
+        <path id="Path_4769" d="M18336.486 820.888h771.9" class="cls-4" data-name="Path 4769" transform="translate(-17726.988 4777)"/>
+        <path id="Path_4773" d="M19434.953 880.56V584.606" class="cls-3" data-name="Path 4773" transform="translate(-18831.42 4990.166)"/>
+        <path id="Rectangle_1104" d="M0 0h23v253H0z" class="cls-5" data-name="Rectangle 1104" transform="translate(1316 5625)"/>
+        <path id="Rectangle_1111" d="M0 0h23v92H0z" class="cls-5" data-name="Rectangle 1111" transform="translate(1159 5786)"/>
+        <path id="Rectangle_1112" d="M0 0h23v46H0z" class="cls-5" data-name="Rectangle 1112" transform="translate(997 5832)"/>
+        <path id="Rectangle_1119" d="M0 0h23v26H0z" class="cls-5" data-name="Rectangle 1119" transform="translate(840 5852)"/>
+        <path id="Rectangle_1123" d="M0 0h23v13H0z" class="cls-5" data-name="Rectangle 1123" transform="translate(683 5865)"/>
+        <path id="Rectangle_1105" d="M0 0h23v183H0z" class="cls-6" data-name="Rectangle 1105" transform="translate(1293 5695)"/>
+        <path id="Rectangle_1110" d="M0 0h23v52H0z" class="cls-6" data-name="Rectangle 1110" transform="translate(1136 5826)"/>
+        <path id="Rectangle_1113" d="M0 0h23v37H0z" class="cls-6" data-name="Rectangle 1113" transform="translate(974 5841)"/>
+        <path id="Rectangle_1118" d="M0 0h23v19H0z" class="cls-6" data-name="Rectangle 1118" transform="translate(817 5859)"/>
+        <path id="Rectangle_1122" d="M0 0h23v10H0z" class="cls-6" data-name="Rectangle 1122" transform="translate(660 5868)"/>
+        <path id="Rectangle_1106" d="M0 0h23v123H0z" class="cls-7" data-name="Rectangle 1106" transform="translate(1270 5755)"/>
+        <path id="Rectangle_1109" d="M0 0h23v37H0z" class="cls-7" data-name="Rectangle 1109" transform="translate(1113 5841)"/>
+        <path id="Rectangle_1114" d="M0 0h23v26H0z" class="cls-7" data-name="Rectangle 1114" transform="translate(951 5852)"/>
+        <path id="Rectangle_1117" d="M0 0h23v13H0z" class="cls-7" data-name="Rectangle 1117" transform="translate(794 5865)"/>
+        <path id="Rectangle_1121" d="M0 0h23v7H0z" class="cls-7" data-name="Rectangle 1121" transform="translate(637 5871)"/>
+        <path id="Rectangle_1107" d="M0 0h23v62H0z" class="cls-8" data-name="Rectangle 1107" transform="translate(1247 5816)"/>
+        <path id="Rectangle_1108" d="M0 0h23v19H0z" class="cls-8" data-name="Rectangle 1108" transform="translate(1090 5859)"/>
+        <path id="Rectangle_1115" d="M0 0h23v13H0z" class="cls-8" data-name="Rectangle 1115" transform="translate(928 5865)"/>
+        <path id="Rectangle_1116" d="M0 0h23v7H0z" class="cls-8" data-name="Rectangle 1116" transform="translate(771 5871)"/>
+        <path id="Rectangle_1120" d="M0 0h23v5H0z" class="cls-8" data-name="Rectangle 1120" transform="translate(614 5873)"/>
+    </g>
+</svg>

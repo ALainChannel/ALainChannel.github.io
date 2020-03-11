@@ -1,10 +1,39 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 
+
+
+
+
+//* POPUP */
+
+$('.show_popup').click(function() { // Вызываем функцию по нажатию на кнопку
+	$('.overlay_popup, .sign').hide();
+	var popup_id = $('#' + $(this).attr("rel")); // Связываем rel и popup_id
+	$('.overlay_popup').show(); // Открываем блок заднего фона
+	$(popup_id).show(); // Открываем окно
+})
+$('.overlay_popup').click(function() { // Обрабатываем клик по заднему фону
+	$('.overlay_popup, .sign').hide(); // Скрываем затемнённый задний фон и основное всплывающее окно
+})
+$('.popup-close').click(function() { // Обрабатываем клик по заднему фону
+	$('.overlay_popup, .sign').hide(); // Скрываем затемнённый задний фон и основное всплывающее окно
+})
+
+//* POPUP END*/
+
+
 });
 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//* Read more*/
 
-
+	$(".blog-card-btn").on("click", function () {
+			var txt = $(".showhide").is(':visible') ? 'Подробнее' : 'Скрыть';
+			$(".blog-card-btn").text(txt);
+			$('.showhide').slideToggle(200);
+	});
+//* Read more end*/
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -135,27 +164,9 @@ $(".select_ul li").click(function(){
 ///////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-//* POPUP */
-
-$('.show_popup').click(function() { // Вызываем функцию по нажатию на кнопку
-	$('.overlay_popup, .sign').hide();
-	var popup_id = $('#' + $(this).attr("rel")); // Связываем rel и popup_id
-	$('.overlay_popup').show(); // Открываем блок заднего фона
-	$(popup_id).show(); // Открываем окно
-})
-$('.overlay_popup').click(function() { // Обрабатываем клик по заднему фону
-	$('.overlay_popup, .sign').hide(); // Скрываем затемнённый задний фон и основное всплывающее окно
-})
-$('.popup-close').click(function() { // Обрабатываем клик по заднему фону
-	$('.overlay_popup, .sign').hide(); // Скрываем затемнённый задний фон и основное всплывающее окно
-})
-
-//* POPUP END*/
+if($("div").hasClass("point-slider")) {
 
 //* SLIDER */
-
 /* Индекс слайда по умолчанию */
 var slideIndex = 0;
 showSlides(slideIndex);
@@ -213,8 +224,7 @@ function autoSlider() {
 	dots[slideIndex-1].className += " active";
 	setTimeout(autoSlider, 6000); // Измените значения авто прокрутки в миллисекундах (ms), пример 6000 это 6 секунд
 	}
-
-
+}
 //* SLIDER  END*/
 
 

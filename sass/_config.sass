@@ -9,7 +9,7 @@
 // USER VARIABLES SECTION
 \:root 
 	font-size: calc(1vw + 1vh + .5vmin)
-
+	scroll-behavior: smooth
 
 $accent:     #f9b034 // Accent Color
 $accentinv:  #6505fb // Accent Color
@@ -80,10 +80,13 @@ a:hover
 
 input, textarea
 	outline: none
-	&:focus:required:invalid
+	&:focus:invalid
 		border-color: red
-	&:required:valid
-		border-color: green	
+	&:valid
+		border-color: green
+	&:required,&:focus
+		border-color: darken($gray,4%)
+
 
 body
 	font-size: $fontsize

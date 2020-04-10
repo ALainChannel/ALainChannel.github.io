@@ -103,7 +103,16 @@ header
 	.logo
 		display: flex
 		align-items: center
-		justify-content: center	
+		justify-content: center
+	.paterndouble-top
+		&::after
+			width: 20em
+			height: 20em 
+			background-size: cover
+		&::before
+			width: 20em
+			height: 20em
+			background-size: cover
 // SELECT
 
 .select_wrap 
@@ -135,7 +144,8 @@ header
 		background: $white
 		box-shadow: 0 0 0.625em #d9d9d9
 		border-radius: 5px 
-		display: none 
+		display: none
+		z-index: 100 
 		li 
 			padding: 10px 20px 
 			cursor: pointer 
@@ -195,7 +205,7 @@ header
 	background: rgba(0, 0, 0, 0.4)
 	display: flex
 	position: fixed
-	z-index: 1070
+	z-index: 1000
 	top: 0
 	right: 0
 	bottom: 0
@@ -220,7 +230,7 @@ header
 .sign-popup
 	display: flex
 	position: fixed
-	z-index: 1080
+	z-index: 1001
 	top: 50%
 	transform: translate(0, -50%)
 	flex-direction: row
@@ -397,7 +407,7 @@ header
 	padding-left: 1.8em
 	width: 100%
 	border-radius: .4em
-	display: none
+	display: block
 .line-mess-red
 	color: $red
 	border-bottom: .2em solid $red
@@ -822,15 +832,34 @@ header
 	margin: 0
 .head-picture
 	width: 95%
-	height: 98%
-	box-shadow: 0 .5em 3em 0 rgba(0, 0, 0, 0.25)
+	height: 93%
+	//box-shadow: 0 .5em 3em 0 rgba(0, 0, 0, 0.25)
 	border-radius: 1.2em
-	object-fit: fill	
+	object-fit: contain
 .head-img
-	height: 35em
-	width: 17em
+	height: 34em
+	width: 25em
+	min-width: 17em
 	margin: 1.5em 1em
-	z-index: 1000
+	z-index: 100
+	margin-top: 2em
+	position: relative
+	margin-right: -4em
+
+.head-picture-phone1
+	position: absolute
+	width: auto
+	left: -1em
+	top: -1em
+	z-index: 111
+	box-shadow: 0 .5em 3em 0 rgba(0, 0, 0, 0.25)
+
+.head-picture-phone	
+	position: absolute
+	width: auto
+	right: -1em
+	z-index: 100
+	box-shadow: 0 .5em 3em 0 rgba(0, 0, 0, 0.25)
 
 .img-btn
 	display: flex
@@ -888,6 +917,7 @@ header
 		background-position: center
 
 .progress-item
+	display: block
 	background: $brownlight
 	border-radius: .8em
 	z-index: 222
@@ -902,6 +932,8 @@ header
 			transform: scale(1.2)
 		.progress-title
 			color: $accent
+	&:not([href])
+		color: $white	
 .head-progress-title
 	font-size: 1.5em
 	margin: 0
@@ -1006,13 +1038,16 @@ video[poster]
 
 .economy-img
 	display: inline-flex
-	width: 60%	
+	width: 60%
 
 .economy-picture
-	width: 100%
+	width: 100%	
+	max-width: 50em
 	height: auto
+	max-height: 50vh
 	padding: 2em 0
-	object-fit: cover	
+	object-fit: contain
+	
 
 
 .economy-desc-item
@@ -1033,8 +1068,6 @@ video[poster]
 	margin: 0
 	font-size: 1.2em
 	text-align: left
-
-
 
 
 // ECONOMY END		
@@ -1125,6 +1158,18 @@ video[poster]
 	&:active
 		color: darken($accentinv, 20%)
 
+
+
+@media screen and ( max-width:768px)	
+	.economy-picture
+		object-fit: contain	
+	.economy,.commission
+		min-height: auto
+	.skeyting
+		min-height: auto
+	.economy-img
+		max-height: 50vh 	
+
 // SKEYTINGASK END			
 
 // ROADMAP 
@@ -1143,7 +1188,7 @@ video[poster]
 	font-stretch: normal
 	font-style: normal
 	line-height: 1.2
-	margin-bottom: 2em
+	margin-bottom: .5em
 
 .roadmap-item-title
 	font-size: 1.5em
@@ -1197,6 +1242,47 @@ video[poster]
 	.roadmap-item-img	
 		&::before
 			background-color: $accent
+
+
+.button-years
+	display: flex
+	align-items: center
+	justify-content: center
+
+.year-road
+	font-family: newyorkb
+	margin: .5em
+	font-size: 1.5em
+	font-weight: 900
+	padding: .4em .7em
+	border-radius: .4em
+	box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.16)
+	border: solid 1px rgba(0, 0, 0, 0)
+	background-color: $accentinv
+	cursor: pointer
+	transition: all .3s ease-in
+	&:hover
+		background-color: $accentinv
+		box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.16)
+	&--one
+		background-color: $accent
+	&--two	
+		background-color: $accentinv 
+.year-none
+	background: transparent
+	box-shadow: none
+	border: none
+
+.year-road-one .roadmap-item	.roadmap-item-img
+	&::before
+		background-color: $accent !important
+	&::after
+		background-color: $accent !important	 
+.year-road-two .roadmap-item .roadmap-item-img
+	&::before
+		background-color: #e045fd !important
+	&::after
+		background-color: #e045fd !important
 @media screen and ( max-width: 768px )
 	.roadmap-item-desc
 		text-align: center
@@ -1939,7 +2025,7 @@ $color_grey_dark: #a2a2a2
 
 .token-economy-item-title,.token-economy-main
 	height: 50%
-	padding: 1.2em
+	padding: 1em
 	align-items: center 
 
 .token-economy-main
@@ -1954,6 +2040,7 @@ $color_grey_dark: #a2a2a2
 .token-economy-hash
 	display: inline-flex
 	max-width: 100%
+	overflow-wrap: anywhere
 	color: darken($gray, 30%)
 	font-size: .8em
 
@@ -2041,7 +2128,7 @@ $color_grey_dark: #a2a2a2
 		width: 35em
 		background: url(../images/src/img/pattern.svg) no-repeat center
 		transform: translate(50%,-50%)
-		z-index: 2
+		z-index: auto
 		opacity: .8
 		bottom: 0
 		top: 100%	
@@ -2054,7 +2141,7 @@ $color_grey_dark: #a2a2a2
 		width: 35em
 		background: url(../images/src/img/pattern.svg) no-repeat center
 		transform: translate(-50%,-50%)
-		z-index: 2
+		z-index: auto
 		opacity: .8
 		bottom: 0
 		top: 100%
@@ -2062,7 +2149,8 @@ $color_grey_dark: #a2a2a2
 		position: absolute
 		background-size: contain	
 
-
+.download-app-btn-on
+	display: none
 @media screen and ( max-width: 767px )
 	.download-app,.download-app-left
 		text-align: center
@@ -2074,6 +2162,23 @@ $color_grey_dark: #a2a2a2
 	.download-app-img
 		width: 50%
 		margin-top: 1em
+	.download-app-desc
+		margin-bottom: 1em
+	.download-app-btn
+		display: none
+	.download-app-btn-on
+		display: block	
+
+@media screen and ( max-width: 1200px )
+	.pattern-bottom
+		&::after
+			width: 20em
+			height: 20em 
+			background-size: cover
+		&::before
+			width: 20em
+			height: 20em
+			background-size: cover
 
 
 // DOWNDLOAD APP END		
@@ -2132,6 +2237,90 @@ $color_grey_dark: #a2a2a2
 		border: $accentinv	!important
 // CONTACT END				
 
+
+// ABOUT US
+.aboutus
+	background: $brown
+	color: $white
+	text-align: center
+	&::after,&::before
+		width: 15em
+		height: 15em
+	&--title
+		font-size: 1.5em
+	&--box
+		padding: 1em
+	&--list
+		display: flex
+		justify-content: center
+	&--link
+		display: flex
+		flex-direction: column
+		align-items: center
+	&--item
+		margin: 1em	
+		&--title
+			font-size: .8em
+			transition: all .3s ease-in
+		&--picture
+			width: 100%
+			max-width: 3em
+			height: auto
+			object-fit: contain
+	&--link:hover
+		.aboutus--item--title
+			color: $accent
+	&--partners-title
+		font-size: .9em
+	&--partners-desc
+		font-size: .8em
+		margin-bottom: .3em
+
+// ABOUT US END
+
+
+// SCROLL UP 
+
+#button 
+	display: flex
+	justify-content: center
+	align-items: center
+	background-color: $accent
+	width: 3em 
+	height: 3em
+	text-align: center 
+	border-radius: 50% 
+	position: fixed 
+	bottom: 1.8em
+	right: 1.8em 
+	transition: background-color .3s, opacity .5s, visibility .5s
+	opacity: 0 
+	visibility: hidden 
+	z-index: 15000
+	margin: 1.8em
+	&::after 
+		content: "" 
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABmJLR0QA/wD/AP+gvaeTAAAD80lEQVR4nO2bTW9VVRiFz70WiFpEKmJxAIlBC8FoaRURjI6II/5CJ5pAYhP/glOHJiSawET/gtEYjYaGqLVpVcLETqjxK4IUlWCglPIw2Ofk1tvb2/Ox93n3vV3PpLO717t6zjpfeyWJEEIIIYQQQgghhBCRAzwFfAx8ARyw1rNpAB4E3gFu0WIJeA8YtNbX1wAngcusz6/AhLXOvgPYD3zSxfh2vgQOWuvueYCHOsRNXu6ksbTdeo6eJI2bhRLGt/MbiqX8AE8Dn3owvp2vgEPW80ULrbi5HcD8DMVSJ3Bx83NA49v5HZgAGtazmwI8A3xWo/HtnAeetfahdoCHcXGzZGh+xjIulh6x9qUWcHHzi63nHfmDfo4lYAT43NbjXEwBz1n75Q3iipu8ZLG0w9q/0gAN3Cn9p6mV1bgGvA00rf0sBPA8cMHWO6/MAEesfd0Q4FHcqXvX1q8grAAfAbusfV4Drbi5YmpRPSziMZYq33IB40mSnEmS5Gh1OYWZT/+OGKw9nSTJZKPRmDNYO0mAndjFzX+4O6ttwJb0iLxhoCOLpcfrND6Lm6sGA4P7Dryvg64nUzPuGWi6jjsIHght/hjwrcGAAPPA6zk0vgZcMtI4B7wcwvgh7OLmJi5uthbQO4A7Iv810HsPdybu9mF8Exc3fxkMAi5u9lbQvwe7WPqbKrEEvABMGwgH+Ak4Udb4DrO8Clw0muUH4HgRsVncrBiILRw3BebKYukfg7myWHoij8gFI4EfAsO+je8w43C6lkUsLQADGwmcrFnUj8AroY3vMOeLwHc1z/pWHmHNmoRlF6nuR0RAqPcmY468F2Tc0RHqGpAvD2uE8Ne9FYo+HwDnAgj5HjgWyMfKAOOEufM7W0bMY/g7Net5VPcArVjy9aplkbLvioDTFRf391S4VlvQfgD+nv5PVRHRpPwpGeS9CDX3A3Dvv74p6cEsVc96XC4WOQqCxQ1G/QDKfXBaAV7yJeCDnAsGeTdOJP0Ain0Ded/nwkN0vyjN4uu//f91o+wHAIeBr7usvYjvb8fAm+ssFGTbBpH3A+i+7eYN3+tlF+TsYhRshwA91g+gtRNkOV1nhlD7iHB3BFPAaIDfHgTeJewOuqV0jRB3S6OpN2O+fzs4qB9gA+oH2EBcG3bVD4gE9QMiQf2ACFA/IBLUD4gE9QMiQP2ASFA/YBXqB6B+gPoBqS71AwKjfgDqB+RB/YBV+tUPKIn6Aagf4BP1A1bNqH5AG+oHtAlTPyAM6gesB+oHxAHqB9iD+gFxgPoBcYD6Afaw2fsBscBm6wfECpuhHxA79Gs/oNegX/oBvQ693A8QQgghhBBCCCGEELVwH4rQtczWKylIAAAAAElFTkSuQmCC)
+		color: #fff 
+		background-size: contain
+		height: 50%
+		z-index: auto
+		width: 50%
+	&:hover 
+		cursor: pointer 
+		background-color: $accentinv
+	&:active 
+		background-color: darken($accentinv,10% )
+	&.show 
+		opacity: 1 
+		visibility: visible 
+
+
+.grecaptcha-badge
+	display: none !important
+	z-index: 1000
+
+// SCROLL UP END
 
 
 
@@ -2235,6 +2424,7 @@ $color_grey_dark: #a2a2a2
 @media screen and ( max-width: 768px )
 	.whitepaper__desc__table__column
 		align-items: center
+
 
 // WHITEPAPER END
 

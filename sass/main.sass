@@ -229,7 +229,10 @@ header
 .sign-popup
 	display: flex
 	position: fixed
-	z-index: 10001
+	-webkit-transform: translate3d(0, 0, 0)
+	transform: translate3d(0, 0, 0)
+	position: absolute
+	z-index: 1000
 	top: 50%
 	transform: translate(0, -50%)
 	flex-direction: row

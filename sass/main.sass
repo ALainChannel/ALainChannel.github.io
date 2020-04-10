@@ -204,7 +204,7 @@ header
 	background: rgba(0, 0, 0, 0.4)
 	display: flex
 	position: fixed
-	z-index: 1000
+	z-index: 100
 	top: 0
 	right: 0
 	bottom: 0
@@ -229,12 +229,16 @@ header
 .sign-popup
 	display: flex
 	position: fixed
-	z-index: 1001
+	z-index: 101
 	top: 50%
-	transform: translate3d(0, -50%, 100px)
+	bottom: auto
+	right: auto
+	left: auto
+	transform: translate3d(0, -50%, 10000px)
 	flex-direction: row
 	align-items: center
 	width: auto
+	max-width: 100vw
 	padding: 0.625em
 	overflow-x: hidden
 	overflow-y: hidden

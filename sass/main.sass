@@ -229,9 +229,9 @@ header
 .sign-popup
 	display: flex
 	position: fixed
-	-webkit-transform: translate3d(0, 0, 200px)
-	transform: translate3d(0, 0, 200px)
-	z-index: 1006 !important 
+	-webkit-transform: translate3d(0, 0, 1000px)
+	transform: translate3d(0, 0, 1000px)
+	z-index: 10000 !important 
 	top: 50%
 	transform: translate(0, -50%)
 	flex-direction: row
@@ -242,6 +242,7 @@ header
 	box-shadow: 0 0 0.625em #d9d9d9
 	border-radius: .5em
 	min-width: 60%
+	position: fixed
 	-webkit-overflow-scrolling: touch
 	&::before
 		z-index: 10

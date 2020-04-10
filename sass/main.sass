@@ -146,7 +146,7 @@ header
 		background: $white
 		box-shadow: 0 0 0.625em #d9d9d9
 		border-radius: 5px 
-		z-index: 100 
+		z-index: 10000 
 		li 
 			padding: 10px 20px 
 			cursor: pointer 
@@ -231,12 +231,13 @@ header
 .sign-popup
 	display: flex
 	position: fixed
-	z-index: 1001
+	z-index: 12000
 	top: 50%
 	bottom: auto
 	transform: translate(0, -50%)
 	flex-direction: row
 	align-items: center
+	min-width: 300px
 	width: auto
 	padding: 0.625em
 	overflow-x: hidden
